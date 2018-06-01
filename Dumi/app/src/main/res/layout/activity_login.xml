@@ -14,15 +14,16 @@
         android:layout_height="match_parent">
 
         <Button
+            android:textAllCaps="false"
             android:id="@+id/btnRegister"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="20dp"
             android:layout_alignParentBottom="true"
             android:padding="10dp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:text="Register"
-            android:textSize="10dp"
+            android:textSize="8dp"
             android:textColor="@android:color/white"
             android:background="@drawable/btn_shadow"/>
 
@@ -51,18 +52,19 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:text="Login"
+            android:textAllCaps="false"
             android:textSize="15dp"
             android:textColor="@android:color/white"
             android:background="@drawable/btn_shadow"/>
 
 
         <LinearLayout
+            android:id="@+id/lnrEdt"
             android:gravity="bottom"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:layout_above="@+id/btnLogin"
-            android:layout_below="@+id/imgLogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -81,7 +83,7 @@
 
 
             <RelativeLayout
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <EditText
@@ -117,8 +119,8 @@
         </LinearLayout>
 
         <ImageView
+            android:layout_above="@+id/lnrEdt"
             android:id="@+id/imgLogo"
-            android:layout_marginTop="60dp"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="40dp"
             android:layout_alignParentLeft="true"
