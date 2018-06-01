@@ -33,12 +33,12 @@
                     android:textSize="35dp"
                     android:textColor="@color/white"/>
 
-                <view
+                <ImageView
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_width="30dp"
                     android:layout_height="2dp"
-                    android:background="@color/white"></view>
+                    android:background="@color/white"></ImageView>
 
                 <TextView
                     android:layout_weight="1"
