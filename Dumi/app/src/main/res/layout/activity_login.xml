@@ -9,6 +9,7 @@
     tools:context=".Activity.LoginActivity">
 
     <RelativeLayout
+        android:background="@drawable/demo_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,6 +27,7 @@
             android:background="@drawable/btn_shadow"/>
 
         <ImageView
+            android:backgroundTint="@android:color/white"
             android:id="@+id/img"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
@@ -40,6 +42,7 @@
             android:background="@drawable/btn_shadow"/>
 
         <Button
+            android:textStyle="bold"
             android:layout_marginBottom="30dp"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/img"
@@ -52,6 +55,17 @@
             android:textColor="@android:color/white"
             android:background="@drawable/btn_shadow"/>
 
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>
