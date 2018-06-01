@@ -43,7 +43,7 @@
 
         <Button
             android:textStyle="bold"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/img"
             android:id="@+id/btnLogin"
@@ -57,15 +57,75 @@
 
 
         <LinearLayout
+            android:gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:layout_above="@+id/btnLogin"
+            android:layout_below="@+id/imgLogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/edtNIK"
+                android:textSize="15dp"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark"
+                android:hint="@string/NIK"
+                android:alpha="0.9"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_edittext_shadow"/>
 
 
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/edtPassword"
+                android:textSize="15dp"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark"
+                android:hint="@string/password"
+                android:alpha="0.9"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_edittext_shadow"/>
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_password_hint"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="13dp"
+                android:layout_gravity="right"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"/>
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_logo"/>
+
     </RelativeLayout>
 
 </LinearLayout>
