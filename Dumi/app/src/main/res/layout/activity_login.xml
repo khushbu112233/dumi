@@ -43,7 +43,7 @@
 
         <Button
             android:textStyle="bold"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/img"
             android:id="@+id/btnLogin"
@@ -118,7 +118,7 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="40dp"
             android:layout_alignParentLeft="true"
