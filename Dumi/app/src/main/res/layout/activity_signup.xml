@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/demo_splash"
+        android:weightSum="2.5"
         android:orientation="vertical">
         <RelativeLayout
             android:id="@+id/rlTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
             android:padding="30dp"
             >
             <ImageView
@@ -33,6 +35,8 @@
             android:layout_below="@+id/rlTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_centerInParent="true"
             android:orientation="vertical">
             <TextView
@@ -103,9 +107,10 @@
         <RelativeLayout
             android:layout_below="@+id/llMiddle"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
+            android:layout_weight="1"
             android:orientation="vertical">
             <Button
                 android:layout_above="@+id/img"
@@ -121,5 +126,5 @@
                 android:textColor="@android:color/white"
                 android:background="@drawable/btn_shadow"/>
         </RelativeLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </layout>
