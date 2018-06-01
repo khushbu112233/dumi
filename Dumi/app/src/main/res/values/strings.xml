@@ -8,8 +8,12 @@
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
+    <string name="next">Next</string>
     <string name="apply_loan">Apply Loan</string>
     <string name="installment">Installment</string>
     <string name="amount">Amount</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="loan_period">Loan Period</string>
+
 
 </resources>

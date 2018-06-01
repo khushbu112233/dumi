@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <item>
+        <shape>
+            <size
+                android:height="100dp"
+                android:width="100dp" />
+            <padding
+                android:left="1000dp"
+                android:right="1000dp"
+                android:top="1000dp"
+                android:bottom="1000dp"/>
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_seek"/>
+
+</layer-list>
