@@ -23,6 +23,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".Activity.WalkthroughActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.SignUpActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
