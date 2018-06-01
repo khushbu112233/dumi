@@ -3,11 +3,8 @@
     <string name="NIK">NIK</string>
     <string name="Mobile_No">Mobile No.</string>
     <string name="Email">Email</string>
-<<<<<<< HEAD
     <string name="Create">Create</string>
     <string name="New_Account">New Account</string>
-=======
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password</string>
->>>>>>> 5a22d5c3521109839afbde0307a60c4a4256103f
 </resources>
