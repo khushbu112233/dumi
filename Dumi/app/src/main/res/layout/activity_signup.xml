@@ -5,23 +5,33 @@
         android:layout_height="match_parent"
         android:background="@drawable/demo_splash"
         android:orientation="vertical">
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/rlTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="30dp"
             >
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="70dp"
                 android:scaleType="fitXY"
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
+                android:src="@drawable/ic_logo" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
                 android:src="@drawable/ic_launcher_background" />
-        </LinearLayout>
+        </RelativeLayout>
         <LinearLayout
+            android:layout_below="@+id/rlTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -35,7 +45,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/New_Account"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
@@ -45,41 +54,47 @@
                 android:inputType="text|textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
                 android:hint="@string/NIK"
                 android:textColorHint="@color/darkBlue"
                 android:textColor="@color/darkBlue"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
-                android:paddingLeft="10dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/white_edittext_shadow"/>
             <EditText
                 android:inputType="text|textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:hint="@string/Mobile_No"
                 android:textColorHint="@color/darkBlue"
                 android:textColor="@color/darkBlue"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/white_edittext_shadow"/>
             <EditText
                 android:inputType="text|textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
                 android:hint="@string/Email"
                 android:textColorHint="@color/darkBlue"
                 android:textColor="@color/darkBlue"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="10dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/white_edittext_shadow"/>
         </LinearLayout>
