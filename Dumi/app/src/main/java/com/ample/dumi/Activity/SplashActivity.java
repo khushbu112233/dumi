@@ -1,7 +1,9 @@
-package com.ample.dumi;
+package com.ample.dumi.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ample.dumi.R;
 
 public class SplashActivity extends AppCompatActivity {
 
