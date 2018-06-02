@@ -23,10 +23,9 @@ import java.util.ArrayList;
  */
 public class NameCardFragment extends Fragment {
 
-    private ArrayList<Integer> images;
-    private GalleryAdapter mAdapter;
     FragmentNameCardBinding fragmentNameCardBinding;
     View view;
+    private Fragment fragment = null;
 
     public NameCardFragment() {
         // Required empty public constructor
@@ -40,26 +39,50 @@ public class NameCardFragment extends Fragment {
         fragmentNameCardBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_name_card, container, false);
         view = fragmentNameCardBinding.getRoot();
-        images = new ArrayList<>();
-        final CarouselLayoutManager layoutManager = new CarouselLayoutManager(CarouselLayoutManager.HORIZONTAL, false);
-        layoutManager.setMaxVisibleItems(3);
-        layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
-        fragmentNameCardBinding.recyclerView.setLayoutManager(layoutManager);
-        fragmentNameCardBinding.recyclerView.setHasFixedSize(true);
-        mAdapter = new GalleryAdapter(getContext(), images);
+
+        fragmentNameCardBinding.imgList1Selected.setVisibility(View.VISIBLE);
+        fragmentNameCardBinding.imgList2Selected.setVisibility(View.INVISIBLE);
+        fragmentNameCardBinding.imgList3Selected.setVisibility(View.INVISIBLE);
+
+        fragment = new NameCardList1Fragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.namecard_container_wrapper, fragment)
+                .addToBackStack(null).commit();
 
 
-        fragmentNameCardBinding.recyclerView.setAdapter(mAdapter);
+        fragmentNameCardBinding.lnrList1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentNameCardBinding.imgList1Selected.setVisibility(View.VISIBLE);
+                fragmentNameCardBinding.imgList2Selected.setVisibility(View.INVISIBLE);
+                fragmentNameCardBinding.imgList3Selected.setVisibility(View.INVISIBLE);
 
-        fragmentNameCardBinding.recyclerView.addOnScrollListener(new CenterScrollListener());
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
+                fragment = new NameCardList1Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.namecard_container_wrapper, fragment)
+                        .addToBackStack(null).commit();
 
+            }
+        });
+
+        fragmentNameCardBinding.lnrList2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentNameCardBinding.imgList1Selected.setVisibility(View.INVISIBLE);
+                fragmentNameCardBinding.imgList2Selected.setVisibility(View.VISIBLE);
+                fragmentNameCardBinding.imgList3Selected.setVisibility(View.INVISIBLE);
+
+                fragment = new NameCardList2Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.namecard_container_wrapper, fragment)
+                        .addToBackStack(null).commit();
+
+            }
+        });
+
+        fragmentNameCardBinding.lnrList3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         return view;
     }
 
