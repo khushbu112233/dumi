@@ -27,6 +27,9 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".Activity.ApplyLoanActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".Activity.ApplyLoanActivity2"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".Activity.MainActivity"></activity>
 
     </application>
