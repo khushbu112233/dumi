@@ -7,15 +7,17 @@
         android:background="@color/white"
         android:orientation="vertical">
         <LinearLayout
+            android:id="@+id/llTop"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="90dp"
             android:gravity="center"
+            android:layout_alignParentTop="true"
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -23,32 +25,33 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_seek" />
+                    android:src="@drawable/ic_help" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/apply_loan"
                     android:gravity="center"
                     android:layout_centerInParent="true"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="25sp"/>
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:scaleType="fitXY"
-                    android:layout_centerInParent="true"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
                     android:src="@drawable/ic_help" />
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_width="match_parent"
@@ -58,98 +61,117 @@
                     android:src="@drawable/black_line" />
             </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="vertical">
+            android:layout_below="@+id/llTop">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:orientation="vertical">
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/installment"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="35dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-10dp"
-                    android:text="@string/amount"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="35dp"/>
-                <View
-                    android:layout_width="30dp"
-                    android:layout_height="5dp"
-                    android:background="@color/black"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/installment"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="35dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:text="@string/amount"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="35dp"/>
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black"/>
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp.1,620,000"
-                    android:textColor="@color/darkBlue"
-                    android:textStyle="bold"
-                    android:textSize="25dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="/month"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="25dp"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/black"/>
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-                <com.github.gcacace.signaturepad.views.SignaturePad
-                    android:id="@+id/signature_pad"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    app:penColor="@android:color/black"
-                    android:background="@drawable/blue_border"
-                    android:text="Signature"
-                    />
-                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp.1,620,000"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/month"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/black"/>
+
+                <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/signature"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:alpha="0.4"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="35sp"/>
-            </FrameLayout>
-        </LinearLayout>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp">
+                    <com.github.gcacace.signaturepad.views.SignaturePad
+                        android:id="@+id/signature_pad"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:penColor="@android:color/black"
+                        android:background="@drawable/blue_border"
+                        android:text="Signature"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signature"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:alpha="0.4"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="35sp"/>
+
+                </FrameLayout>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_checkbox"
+                    android:textSize="11sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/darkBlue" />
+            </LinearLayout>
+        </ScrollView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnApply"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
