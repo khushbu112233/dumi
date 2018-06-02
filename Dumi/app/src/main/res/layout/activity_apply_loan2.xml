@@ -16,8 +16,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -25,35 +25,33 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:padding="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_seek" />
+                    android:src="@drawable/ic_help" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/apply_loan"
                     android:gravity="center"
                     android:layout_centerInParent="true"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="25sp"/>
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:padding="10dp"
                     android:src="@drawable/ic_help" />
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_width="match_parent"
@@ -66,7 +64,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/llTop">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,6 +96,31 @@
                         android:background="@color/black"/>
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp.1,620,000"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/month"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp"
@@ -106,10 +128,12 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
                     android:background="@color/black"/>
+
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginRight="10dp">
                     <com.github.gcacace.signaturepad.views.SignaturePad
                         android:id="@+id/signature_pad"
@@ -129,30 +153,16 @@
                         android:textColor="@color/darkBlue"
                         android:textSize="35sp"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rp.1,620,000"
-                            android:textColor="@color/darkBlue"
-                            android:textSize="21dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="/month"
-                            android:textColor="@color/darkBlue"
-                            android:textSize="25dp" />
-                    </LinearLayout>
                 </FrameLayout>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_checkbox"
+                    android:textSize="11sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/darkBlue" />
             </LinearLayout>
         </ScrollView>
         <LinearLayout
@@ -161,7 +171,7 @@
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnApply"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"

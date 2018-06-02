@@ -21,17 +21,23 @@
         <activity
             android:name=".Activity.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.WalkthroughActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Activity.SignUpActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Activity.ApplyLoanActivity"
-            android:screenOrientation="portrait"></activity>
-
-        <activity android:name=".Activity.ApplyLoanActivity2"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Activity.MainActivity"></activity>
-
+        <activity
+            android:name=".Activity.WalkthroughActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ApplyLoanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ApplyLoanActivity2"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.LoanHistoryActivity"
+            android:label="@string/title_activity_loan_history"
+          ></activity>
     </application>
 
 </manifest>
