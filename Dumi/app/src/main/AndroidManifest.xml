@@ -39,7 +39,8 @@
             android:label="@string/title_activity_loan_history" />
         <activity android:name=".Activity.TransferActivity" />
         <activity android:name=".Activity.TransferToYourBankActivity" />
-        <activity android:name=".Activity.TransfertoAnotherBankActivity"></activity>
+        <activity android:name=".Activity.TransfertoAnotherBankActivity" />
+        <activity android:name=".Activity.TransfertoDummyActivity"></activity>
     </application>
 
 </manifest>

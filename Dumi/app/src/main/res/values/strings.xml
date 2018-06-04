@@ -14,6 +14,7 @@
     <string name="transfer_to_your_bank">Transfer to your Bank</string>
     <string name="transfer_to_another_bank">Transfer to another Bank</string>
     <string name="transfer_to_dumi_user">Transfer to another Dumi user</string>
+    <string name="transfer_to_dumi_user_nik">Dumi Transfer (NIK No.)</string>
     <string name="loan_history">Loan History</string>
     <string name="transfer">Transfer</string>
     <string name="apply_loan">Apply Loan</string>
