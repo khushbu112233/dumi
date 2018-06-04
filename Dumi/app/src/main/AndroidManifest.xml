@@ -36,8 +36,8 @@
         <activity android:name=".Activity.MainActivity" />
         <activity
             android:name=".Activity.LoanHistoryActivity"
-            android:label="@string/title_activity_loan_history"
-          ></activity>
+            android:label="@string/title_activity_loan_history" />
+        <activity android:name=".Activity.TransferActivity"></activity>
     </application>
 
 </manifest>

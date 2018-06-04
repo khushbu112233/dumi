@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ample.dumi.Activity.ApplyLoanActivity;
+import com.ample.dumi.Activity.LoanHistoryActivity;
+import com.ample.dumi.Activity.TransferActivity;
 import com.ample.dumi.R;
 import com.ample.dumi.databinding.FragmentLoanBinding;
 
@@ -40,6 +42,20 @@ public class LoanFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, ApplyLoanActivity.class);
+                startActivity(i);
+            }
+        });
+        fragmentLoanBinding.lnrHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, LoanHistoryActivity.class);
+                startActivity(i);
+            }
+        });
+        fragmentLoanBinding.lnrTransfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,TransferActivity.class);
                 startActivity(i);
             }
         });
