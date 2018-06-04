@@ -95,13 +95,17 @@
                     android:gravity="center"
                     android:orientation="vertical">
                     <FrameLayout
-                        android:layout_width="250dp"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/round_blue"
                         >
+
                     <com.ample.dumi.Utils.MySeekBar
-                        android:layout_width="250dp"
-                        android:layout_height="48dp"
+                        android:layout_marginRight="-15dp"
+                        android:layout_marginLeft="-15dp"
+                        android:thumbOffset="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
                         android:layout_gravity="center"
                         android:progressDrawable="@xml/progress_drawable"
                         android:thumb="@drawable/ic_seek"/>
