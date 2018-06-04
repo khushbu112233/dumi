@@ -80,7 +80,13 @@ public class NameCardFragment extends Fragment {
         fragmentNameCardBinding.lnrList3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fragmentNameCardBinding.imgList1Selected.setVisibility(View.INVISIBLE);
+                fragmentNameCardBinding.imgList2Selected.setVisibility(View.INVISIBLE);
+                fragmentNameCardBinding.imgList3Selected.setVisibility(View.VISIBLE);
 
+                fragment = new NameCardList3Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.namecard_container_wrapper, fragment)
+                        .addToBackStack(null).commit();
             }
         });
         return view;

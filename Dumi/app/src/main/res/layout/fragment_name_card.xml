@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -41,8 +41,8 @@
 
                     <ImageView
                         android:id="@+id/imgList1Selected"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:src="@drawable/round_blue"/>
 
                 </FrameLayout>
@@ -69,8 +69,8 @@
                     <ImageView
                         android:visibility="invisible"
                         android:id="@+id/imgList2Selected"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:src="@drawable/round_blue"/>
 
                 </FrameLayout>
@@ -97,8 +97,8 @@
                     <ImageView
                         android:visibility="invisible"
                         android:id="@+id/imgList3Selected"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:src="@drawable/round_blue"/>
 
                 </FrameLayout>
