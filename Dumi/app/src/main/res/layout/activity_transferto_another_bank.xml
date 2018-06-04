@@ -64,8 +64,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.60"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:orientation="vertical"
                 android:weightSum="1">
 
@@ -79,7 +79,9 @@
                     android:orientation="vertical">
                     <ScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/llTransfer"
+                        >
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -282,6 +284,7 @@
                         </LinearLayout>
                     </ScrollView>
                     <LinearLayout
+                        android:id="@+id/llTransfer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
