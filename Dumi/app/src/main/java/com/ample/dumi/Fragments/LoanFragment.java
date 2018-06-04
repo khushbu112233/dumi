@@ -57,7 +57,7 @@ public class LoanFragment extends Fragment {
         fragmentLoanBinding.lnrTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,TransfertoAnotherBankActivity.class);
+                Intent i = new Intent(context,TransferActivity.class);
                 startActivity(i);
             }
         });

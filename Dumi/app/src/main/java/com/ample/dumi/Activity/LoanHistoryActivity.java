@@ -24,7 +24,7 @@ public class LoanHistoryActivity extends AppCompatActivity {
         activityLoanHistoryBinding.includeActionbar1.txtActionBarTitle.setText(getResources().getString(R.string.loan_history));
         adapter = new LoanHistoryAdapter(LoanHistoryActivity.this);
         activityLoanHistoryBinding.lstLoanHistory.setAdapter(adapter);
-        activityLoanHistoryBinding.includeActionbar1.imgActionBarLogo.setOnClickListener(new View.OnClickListener() {
+        activityLoanHistoryBinding.includeActionbar1.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

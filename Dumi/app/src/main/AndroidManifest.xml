@@ -37,10 +37,17 @@
         <activity
             android:name=".Activity.LoanHistoryActivity"
             android:label="@string/title_activity_loan_history" />
-        <activity android:name=".Activity.TransferActivity" />
-        <activity android:name=".Activity.TransferToYourBankActivity" />
-        <activity android:name=".Activity.TransfertoAnotherBankActivity" />
-        <activity android:name=".Activity.TransfertoDummyActivity"></activity>
+        <activity android:name=".Activity.TransferActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.TransferToYourBankActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.TransfertoAnotherBankActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.TransfertoDummyActivity"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>
