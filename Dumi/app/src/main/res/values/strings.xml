@@ -21,7 +21,10 @@
     <string name="signature">Signature</string>
     <string name="amount">Amount</string>
     <string name="loan_amount">Loan Amount</string>
+    <string name="name_Account">Name of Account</string>
     <string name="loan_period">Loan Period</string>
+    <string name="add_new_payee">Add New Payee</string>
+    <string name="note">Note</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
