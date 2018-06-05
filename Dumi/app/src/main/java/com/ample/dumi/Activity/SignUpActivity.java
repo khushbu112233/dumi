@@ -28,5 +28,13 @@ public class SignUpActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        activitySignupBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignUpActivity.this, OTPSendActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
