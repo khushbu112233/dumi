@@ -28,6 +28,8 @@ public class TransferActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+
+                activityTransferBinding.txtSeek1.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -47,6 +49,8 @@ public class TransferActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+
+                activityTransferBinding.txtSeek2.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -66,6 +70,8 @@ public class TransferActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+
+                activityTransferBinding.txtSeek3.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
