@@ -297,6 +297,7 @@
                             android:background="@drawable/round_blue"
                             >
                             <com.ample.dumi.Utils.MySeekBar
+                                android:id="@+id/seekbarTransDumi"
                                 android:layout_marginRight="-15dp"
                                 android:layout_marginLeft="-15dp"
                                 android:thumbOffset="0dp"
