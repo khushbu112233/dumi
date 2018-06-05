@@ -109,6 +109,7 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/txtForgotPassword"
                 android:layout_marginTop="5dp"
                 android:textSize="13dp"
                 android:layout_gravity="right"

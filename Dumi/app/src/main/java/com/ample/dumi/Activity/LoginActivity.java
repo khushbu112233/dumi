@@ -34,5 +34,12 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        activityLoginBinding.txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this,ForgotActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
