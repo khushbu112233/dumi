@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.AddPayeeDumiTransferActivity">
+
+        <RelativeLayout
+            android:id="@+id/rltAddPayee"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_centerVertical="true"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_left_back"/>
+
+            <TextView
+                android:id="@+id/txtActionBarTitle"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Transfer"/>
+
+            <!--<ImageView
+                android:id="@+id/imgActionBarHelp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_help"/>-->
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_bg1"
+            android:layout_below="@+id/rltAddPayee"
+            android:layout_above="@+id/lnrAddPayee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ImageView>
+
+        <LinearLayout
+            android:weightSum="3"
+            android:paddingLeft="30dp"
+            contentPaddingRight="20dp"
+            android:layout_below="@+id/rltAddPayee"
+            android:layout_above="@+id/lnrAddPayee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:text="Add Payee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_above="@+id/edtNameAccount"
+                    android:id="@+id/edtAccount"
+                    android:textSize="15dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/account_no"
+                    android:alpha="0.8"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_edittext_shadow"/>
+
+
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:layout_above="@+id/edtIFSCCode"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtNameAccount"
+                    android:textSize="15dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/name_Account"
+                    android:alpha="0.8"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_edittext_shadow"/>
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:layout_above="@+id/btnAdd"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtIFSCCode"
+                    android:textSize="15dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/IFSC_code"
+                    android:alpha="0.8"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_edittext_shadow"/>
+
+
+                <Button
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/btnAdd"
+                    android:padding="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_shadow"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrAddPayee"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="right"
+                android:textColor="#2e5ca6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Payee"/>
+
+            <FrameLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_trans_another_bank"
+                >
+
+                <com.ample.dumi.Utils.MySeekBar
+                    android:layout_marginRight="-15dp"
+                    android:layout_marginLeft="-15dp"
+                    android:thumbOffset="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@xml/progress_trans_another_bank"
+                    android:thumb="@drawable/ic_trans_to_bank"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer_to_another_bank"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"/>
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.sa90.materialarcmenu.ArcMenu
+                android:id="@+id/arcMenu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:menu_color="#33a9d4"
+                android:foregroundGravity="top"
+                app:menu_elevation="12dp"
+                app:fabSize="mini"
+                app:menu_open="arc_top_left"
+                app:menu_radius="70dp"
+                app:menu_scr="@drawable/ic_help"
+                app:menu_margin="0dp">
+
+                <ImageView
+                    android:id="@+id/fab1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_user" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_setting" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_help_menu" />
+
+            </com.sa90.materialarcmenu.ArcMenu>
+
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

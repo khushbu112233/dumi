@@ -29,7 +29,8 @@
     <string name="add_new_payee">Add New Payee</string>
     <string name="note">Note</string>
     <string name="name_of_account">Name of Account</string>
-
+    <string name="account_no">Account No.</string>
+    <string name="IFSC_code">IFSC Code</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_loan_history">LoanHistoryActivity</string>
