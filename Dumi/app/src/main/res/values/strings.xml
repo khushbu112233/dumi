@@ -6,6 +6,8 @@
     <string name="Email">Email</string>
     <string name="Create">Create</string>
     <string name="forgot">Forgot</string>
+    <string name="sms_otp_verification">SMS OTP Verification number</string>
+    <string name="otp_number">OTP Number</string>
     <string name="New_Account">New Account</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password</string>

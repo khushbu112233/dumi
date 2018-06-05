@@ -49,7 +49,10 @@
         <activity
             android:name=".Activity.TransfertoDummyActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.ForgotActivity"></activity>
+        <activity
+            android:name=".Activity.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.OTPSendActivity"></activity>
     </application>
 
 </manifest>
