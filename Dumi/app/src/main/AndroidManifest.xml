@@ -35,9 +35,11 @@
             android:screenOrientation="portrait" />
         <activity android:name=".Activity.MainActivity" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".Activity.LoanHistoryActivity"
             android:label="@string/title_activity_loan_history" />
-        <activity android:name=".Activity.AddPayeeDumiTransferActivity" />
+        <activity android:name=".Activity.AddPayeeDumiTransferActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.TransferActivity"
             android:screenOrientation="portrait" />
@@ -50,7 +52,10 @@
         <activity
             android:name=".Activity.TransfertoDummyActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.AddPayeeTransferActivity"></activity>
+        <activity android:name=".Activity.AddPayeeTransferActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.ForgotActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
