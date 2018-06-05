@@ -17,6 +17,7 @@
             >
 
             <AutoCompleteTextView
+                android:singleLine="true"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/txt_back"
                 android:paddingRight="10dp"

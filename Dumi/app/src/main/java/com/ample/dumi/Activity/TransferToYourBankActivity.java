@@ -6,7 +6,6 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 
@@ -19,21 +18,23 @@ ActivityTransferToYourBankBinding activityTransferToYourBankBinding;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityTransferToYourBankBinding = DataBindingUtil.setContentView(this,R.layout.activity_transfer_to_your_bank);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        activityTransferToYourBankBinding.includeActionbar1.txtActionBarTitle.setText(getResources().getString(R.string.transfer));
-
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
         activityTransferToYourBankBinding.includeActionbar1.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        activityTransferToYourBankBinding.seekbarTransToyour.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+        activityTransferToYourBankBinding.seekTransToYourBank.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChangedValue = 0;
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
-                activityTransferToYourBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -45,10 +46,5 @@ ActivityTransferToYourBankBinding activityTransferToYourBankBinding;
                 startActivity(i);
             }
         });
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        activityTransferToYourBankBinding.seekbarTransToyour.setProgress(0);
     }
 }

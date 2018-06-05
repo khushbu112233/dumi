@@ -6,7 +6,6 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 
@@ -20,21 +19,23 @@ public class TransfertoAnotherBankActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityTransfertoAnotherBankBinding = DataBindingUtil.setContentView(this,R.layout.activity_transferto_another_bank);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        activityTransfertoAnotherBankBinding.includeActionbar1.txtActionBarTitle.setText(getResources().getString(R.string.transfer));
-
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
         activityTransfertoAnotherBankBinding.includeActionbar1.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        activityTransfertoAnotherBankBinding.seekbarTransToAnother.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+        activityTransfertoAnotherBankBinding.seekTransToBank.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChangedValue = 0;
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
-                activityTransfertoAnotherBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -46,10 +47,5 @@ public class TransfertoAnotherBankActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        activityTransfertoAnotherBankBinding.seekbarTransToAnother.setProgress(0);
     }
 }
