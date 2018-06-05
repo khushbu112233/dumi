@@ -117,7 +117,7 @@
             android:orientation="vertical">
             <Button
                 android:layout_above="@+id/img"
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSubmit"
                 android:padding="10dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
