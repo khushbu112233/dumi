@@ -125,6 +125,7 @@
                                 </LinearLayout>
                             </LinearLayout>
                             <EditText
+                                android:singleLine="true"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="15sp"
@@ -244,6 +245,7 @@
                                 </LinearLayout>
                             </LinearLayout>
                             <EditText
+                                android:singleLine="true"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="15sp"
@@ -297,6 +299,7 @@
                             android:background="@drawable/round_blue"
                             >
                             <com.ample.dumi.Utils.MySeekBar
+                                android:id="@+id/seekTransToBank"
                                 android:layout_marginRight="-15dp"
                                 android:layout_marginLeft="-15dp"
                                 android:thumbOffset="0dp"
