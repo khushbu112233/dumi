@@ -70,7 +70,7 @@
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
+                android:layout_weight="5"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
@@ -106,8 +106,9 @@
                         android:src="@drawable/ic_tap_card"/>
 
                     <TextView
+                        android:textAlignment="center"
                         android:layout_marginTop="5dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tap Card"
                         android:textColor="@android:color/black"/>
@@ -127,8 +128,9 @@
                         android:src="@drawable/ic_scan_qr"/>
 
                     <TextView
+                        android:textAlignment="center"
                         android:layout_marginTop="5dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Scan QR Code"
                         android:textColor="@android:color/black"/>
@@ -136,6 +138,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:id="@+id/lnrApplyLoan"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -150,8 +153,9 @@
                     android:src="@drawable/ic_my_qr"/>
 
                 <TextView
+                    android:textAlignment="center"
                     android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="My QR Code"
                     android:textColor="@android:color/black"/>
