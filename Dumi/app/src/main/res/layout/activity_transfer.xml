@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -11,9 +11,11 @@
             />
 
         <LinearLayout
+            android:layout_below="@+id/include_actionbar1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/white"
             android:weightSum="1"
             >
             <LinearLayout
@@ -65,19 +67,23 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.33"
                     android:gravity="center"
-                    android:layout_gravity="center"
                     android:orientation="vertical">
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                        <ng.max.slideview.SlideView
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_blue"
+                        >
+
+                        <com.ample.dumi.Utils.MySeekBar
+                            android:id="@+id/seekTrYourBank"
+                            android:layout_marginRight="-15dp"
+                            android:layout_marginLeft="-15dp"
+                            android:thumbOffset="0dp"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
+                            android:layout_height="47dp"
                             android:layout_gravity="center"
-                            app:sv_buttonBackgroundColor="@color/light_blue"
-                            app:sv_buttonImage="@drawable/ic_seek"
-                            app:sv_slideBackgroundColor="@color/light_blue"
-                            app:sv_slideTextColor="@color/darkBlue" />
+                            android:progressDrawable="@xml/progress_drawable"
+                            android:thumb="@drawable/ic_seek"/>
                         <TextView
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
@@ -101,6 +107,7 @@
                         >
 
                     <com.ample.dumi.Utils.MySeekBar
+                        android:id="@+id/seekTrAnotherBank"
                         android:layout_marginRight="-15dp"
                         android:layout_marginLeft="-15dp"
                         android:thumbOffset="0dp"
@@ -127,15 +134,20 @@
                     android:orientation="vertical">
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                        <ng.max.slideview.SlideView
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_blue"
+                        >
+
+                        <com.ample.dumi.Utils.MySeekBar
+                            android:id="@+id/seekTrDummyUser"
+                            android:layout_marginRight="-15dp"
+                            android:layout_marginLeft="-15dp"
+                            android:thumbOffset="0dp"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
+                            android:layout_height="47dp"
                             android:layout_gravity="center"
-                            app:sv_buttonBackgroundColor="@color/light_blue"
-                            app:sv_buttonImage="@drawable/ic_seek"
-                            app:sv_slideBackgroundColor="@color/light_blue"
-                            app:sv_slideTextColor="@color/darkBlue" />
+                            android:progressDrawable="@xml/progress_drawable"
+                            android:thumb="@drawable/ic_seek"/>
                         <TextView
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
@@ -148,5 +160,48 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.sa90.materialarcmenu.ArcMenu
+                android:id="@+id/arcMenu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:menu_color="#33a9d4"
+                android:foregroundGravity="top"
+                app:menu_elevation="12dp"
+                app:fabSize="mini"
+                app:menu_open="arc_top_left"
+                app:menu_radius="70dp"
+                app:menu_scr="@drawable/ic_help"
+                app:menu_margin="0dp">
+
+                <ImageView
+                    android:id="@+id/fab1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_user" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_setting" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_help_menu" />
+
+            </com.sa90.materialarcmenu.ArcMenu>
+
+        </FrameLayout>
+
+    </RelativeLayout>
 </layout>

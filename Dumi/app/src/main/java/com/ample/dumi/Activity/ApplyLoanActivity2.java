@@ -39,6 +39,12 @@ public class ApplyLoanActivity2 extends AppCompatActivity {
                 //Event triggered when the pad is cleared
             }
         });
+        activityApplyLoan2Binding.imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         activityApplyLoan2Binding.btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

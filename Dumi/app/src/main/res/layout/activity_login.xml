@@ -9,7 +9,7 @@
     tools:context=".Activity.LoginActivity">
 
     <RelativeLayout
-        android:background="@drawable/demo_splash"
+        android:background="@drawable/ic_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

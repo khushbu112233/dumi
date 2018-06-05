@@ -27,6 +27,11 @@ public class ApplyLoanActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        activityApplyLoanBinding.imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
