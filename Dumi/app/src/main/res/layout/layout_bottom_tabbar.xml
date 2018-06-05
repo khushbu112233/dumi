@@ -45,7 +45,7 @@
                     android:id="@+id/imgLoanSelected"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/round_blue"/>
+                    android:background="@drawable/round_blue"/>
 
             </FrameLayout>
             
@@ -78,7 +78,7 @@
                     android:id="@+id/imgNameSelected"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/round_blue"/>
+                    android:background="@drawable/round_blue"/>
 
             </FrameLayout>
 

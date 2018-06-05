@@ -43,7 +43,7 @@
                         android:id="@+id/imgList1Selected"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/round_blue"/>
+                        android:background="@drawable/round_blue"/>
 
                 </FrameLayout>
 
@@ -71,7 +71,7 @@
                         android:id="@+id/imgList2Selected"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/round_blue"/>
+                        android:background="@drawable/round_blue"/>
 
                 </FrameLayout>
 
@@ -99,7 +99,7 @@
                         android:id="@+id/imgList3Selected"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/round_blue"/>
+                        android:background="@drawable/round_blue"/>
 
                 </FrameLayout>
 

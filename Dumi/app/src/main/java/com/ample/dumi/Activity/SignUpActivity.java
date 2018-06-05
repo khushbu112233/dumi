@@ -1,5 +1,6 @@
 package com.ample.dumi.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -16,16 +17,20 @@ import com.ample.dumi.databinding.ActivitySignupBinding;
 public class SignUpActivity extends AppCompatActivity {
 
     ActivitySignupBinding activitySignupBinding;
+    public static Activity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activitySignupBinding = DataBindingUtil.setContentView(this,R.layout.activity_signup);
 
+        activity = this;
         activitySignupBinding.imgClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SignUpActivity.this,LoginActivity.class);
                 startActivity(i);
+                LoginActivity.killLogin();
+                finish();
             }
         });
 
@@ -36,5 +41,9 @@ public class SignUpActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public static void killSignUp(){
+        activity.finish();
     }
 }
