@@ -12,11 +12,7 @@
         <activity
             android:name=".Activity.SplashActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.LoginActivity"
@@ -38,7 +34,13 @@
             android:name=".Activity.LoanHistoryActivity"
             android:label="@string/title_activity_loan_history" />
 
-        <activity android:name=".Activity.AddPayeeDumiTransferActivity"></activity>
+        <activity android:name=".Activity.AddPayeeDumiTransferActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Activity.TransferActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".Activity.TransferToYourBankActivity"

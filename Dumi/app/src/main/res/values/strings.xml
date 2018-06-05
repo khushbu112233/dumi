@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dumi</string>
     <string name="NIK">NIK</string>
+    <string name="NIK_no">NIK No.</string>
     <string name="Mobile_No">Mobile No.</string>
     <string name="Email">Email</string>
     <string name="Create">Create</string>
@@ -27,7 +28,7 @@
     <string name="loan_period">Loan Period</string>
     <string name="add_new_payee">Add New Payee</string>
     <string name="note">Note</string>
-
+    <string name="name_of_account">Name of Account</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
