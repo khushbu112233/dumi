@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ample.dumi.R;
+import com.ample.dumi.Utils.util;
 import com.ample.dumi.databinding.ActivityForgotBinding;
 
 public class ForgotActivity extends AppCompatActivity {
@@ -17,6 +18,12 @@ public class ForgotActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityForgotBinding = DataBindingUtil.setContentView(this,R.layout.activity_forgot);
 
+        activityForgotBinding.imgClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         activityForgotBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -24,7 +31,7 @@ public class ForgotActivity extends AppCompatActivity {
                 email = activityForgotBinding.edtEmail.getText().toString();
                 if(email.isEmpty())
                 {
-                    activityForgotBinding.edtEmail.setVisibility(View.VISIBLE);
+                    util.showAlert(ForgotActivity.this,getResources().getString(R.string.Email_empty));
                 }
                 else
                 {

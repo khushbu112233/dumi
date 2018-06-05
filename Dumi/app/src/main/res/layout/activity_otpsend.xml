@@ -59,6 +59,7 @@
                 android:textColor="@color/white"
                 android:textSize="30sp"/>
             <EditText
+                android:id="@+id/edtOtpNumber"
                 android:alpha="0.8"
                 android:inputType="text"
                 android:layout_width="match_parent"
@@ -95,7 +96,6 @@
                 android:background="@drawable/white_edittext_shadow"/>
             <EditText
                 android:alpha="0.8"
-                android:id="@+id/edtEmail"
                 android:inputType="text|textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
