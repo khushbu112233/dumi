@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dumi</string>
     <string name="NIK">NIK</string>
+    <string name="NIK_no">NIK No.</string>
     <string name="Mobile_No">Mobile No.</string>
     <string name="Email">Email</string>
     <string name="Create">Create</string>
@@ -15,6 +16,7 @@
     <string name="transfer_to_your_bank">Transfer to your Bank</string>
     <string name="transfer_to_another_bank">Transfer to another Bank</string>
     <string name="transfer_to_dumi_user">Transfer to another Dumi user</string>
+    <string name="dummy_transfer">Dumi Transfer</string>
     <string name="transfer_to_dumi_user_nik">Dumi Transfer (NIK No.)</string>
     <string name="loan_history">Loan History</string>
     <string name="transfer">Transfer</string>
@@ -27,7 +29,7 @@
     <string name="loan_period">Loan Period</string>
     <string name="add_new_payee">Add New Payee</string>
     <string name="note">Note</string>
-
+    <string name="name_of_account">Name of Account</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
