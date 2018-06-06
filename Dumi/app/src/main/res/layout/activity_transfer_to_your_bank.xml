@@ -118,7 +118,7 @@
                                     <ImageView
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@drawable/ic_name_of_Acc" />
+                                        android:src="@drawable/ic_name_of_acc" />
                                 </LinearLayout>
                             </LinearLayout>
                             <EditText
@@ -196,13 +196,23 @@
                                     android:textColor="@color/light_blue"
                                     android:textSize="17sp"/>
                             </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/blue_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
                             <com.ample.dumi.Utils.MySeekBar
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
                                 android:maxHeight="2dip"
                                 android:minHeight="2dip"
-                                android:background="@drawable/blue_line"
                                 android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
+                            </RelativeLayout>
                         </LinearLayout>
                     </ScrollView>
                     <LinearLayout
@@ -236,7 +246,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="47dp"
                                 android:layout_gravity="center"
-                                android:progressDrawable="@xml/progress_trans_another_bank"
+                                android:progressDrawable="@xml/progress_drawable"
                                 android:thumb="@drawable/ic_trans_bank2"/>
                             <TextView
                                 android:layout_weight="1"
