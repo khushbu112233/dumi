@@ -52,5 +52,6 @@ public class TransfertoDummyActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         activityTransfertoDummyBinding.seekbarTransDumi.setProgress(0);
+        activityTransfertoDummyBinding.txtSeek.setTextColor(getResources().getColor(R.color.black));
     }
 }
