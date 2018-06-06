@@ -23,7 +23,7 @@
                 android:paddingLeft="40dp"
                 contentPaddingRight="20dp"
                 android:gravity="center_vertical"
-                android:background="@drawable/loan_bal"
+                android:background="@drawable/bg_trans_to_your_bank"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.40"
@@ -118,7 +118,7 @@
                                     <ImageView
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@drawable/ic_close" />
+                                        android:src="@drawable/ic_name_of_Acc" />
                                 </LinearLayout>
                             </LinearLayout>
                             <EditText
@@ -167,7 +167,7 @@
                                     <ImageView
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@drawable/ic_close" />
+                                        android:src="@drawable/ic_edit_sky_blue" />
                                 </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
@@ -203,41 +203,26 @@
                                 android:minHeight="2dip"
                                 android:background="@drawable/blue_line"
                                 android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:layout_marginBottom="5dp"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_weight="0.20"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
-                                    android:gravity="left|center"
-                                    android:visibility="invisible"
-                                    android:textSize="13sp"/>
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_weight="0.80"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/add_new_payee"
-                                    android:paddingBottom="10dp"
-                                    android:paddingTop="10dp"
-                                    android:layout_gravity="right"
-                                    android:gravity="right|center"
-                                    android:textColor="@color/light_blue"
-                                    android:textSize="15sp"/>
-                            </LinearLayout>
                         </LinearLayout>
                     </ScrollView>
                     <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="bottom"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.33"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_new_payee"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center"
+                            android:textColor="@color/light_blue"
+                            android:textSize="15sp"/>
                         <FrameLayout
                             android:layout_width="250dp"
                             android:layout_height="50dp"
@@ -252,7 +237,7 @@
                                 android:layout_height="47dp"
                                 android:layout_gravity="center"
                                 android:progressDrawable="@xml/progress_trans_another_bank"
-                                android:thumb="@drawable/ic_trans_to_bank"/>
+                                android:thumb="@drawable/ic_trans_bank2"/>
                             <TextView
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
