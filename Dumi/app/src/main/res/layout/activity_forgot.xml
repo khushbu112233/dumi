@@ -74,6 +74,7 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/white_edittext_shadow"/>
             <EditText
+                android:singleLine="true"
                 android:alpha="0.8"
                 android:inputType="text|textEmailAddress"
                 android:layout_width="match_parent"
