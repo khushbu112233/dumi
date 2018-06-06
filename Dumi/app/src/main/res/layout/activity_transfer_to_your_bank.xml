@@ -251,16 +251,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="47dp"
                                 android:layout_gravity="center"
-                                android:progressDrawable="@xml/progress_drawable"
-                                android:thumb="@drawable/ic_seek"/>
+                                android:progressDrawable="@xml/progress_trans_another_bank"
+                                android:thumb="@drawable/ic_trans_to_bank"/>
                             <TextView
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/transfer_to_another_bank"
+                                android:text="@string/transfer_to_your_bank"
                                 android:textSize="13sp"
                                 android:layout_gravity="center"
-                                android:textColor="@color/darkBlue"/>
+                                android:textColor="@color/light_blue"/>
                         </FrameLayout>
                     </LinearLayout>
                 </LinearLayout>

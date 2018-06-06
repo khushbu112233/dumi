@@ -34,6 +34,8 @@ public class TransfertoAnotherBankActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+
+                activityTransfertoAnotherBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -51,5 +53,6 @@ public class TransfertoAnotherBankActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         activityTransfertoAnotherBankBinding.seekTransToBank.setProgress(0);
+        activityTransfertoAnotherBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.black));
     }
 }

@@ -75,12 +75,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
                         android:layout_above="@+id/llTransfer"
                         >
                         <LinearLayout
@@ -264,7 +265,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/llTransfer"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
                         android:orientation="horizontal"
                         android:weightSum="1">
@@ -308,9 +309,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="47dp"
                                 android:layout_gravity="center"
-                                android:progressDrawable="@xml/progress_drawable"
-                                android:thumb="@drawable/ic_seek"/>
+                                android:progressDrawable="@xml/progress_trans_another_bank"
+                                android:thumb="@drawable/ic_trans_to_bank"/>
                             <TextView
+                                android:id="@+id/txtSeek"
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
