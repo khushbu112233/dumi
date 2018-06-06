@@ -97,5 +97,9 @@ public class TransferActivity extends AppCompatActivity {
         activityTransferBinding.seekTrDummyUser.setProgress(0);
         activityTransferBinding.seekTrAnotherBank.setProgress(0);
         activityTransferBinding.seekTrYourBank.setProgress(0);
+
+        activityTransferBinding.txtSeek1.setTextColor(getResources().getColor(R.color.black));
+        activityTransferBinding.txtSeek2.setTextColor(getResources().getColor(R.color.black));
+        activityTransferBinding.txtSeek3.setTextColor(getResources().getColor(R.color.black));
     }
 }
