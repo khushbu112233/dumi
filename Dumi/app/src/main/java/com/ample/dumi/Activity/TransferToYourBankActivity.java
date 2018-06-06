@@ -27,7 +27,7 @@ public class TransferToYourBankActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        activityTransferToYourBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.white));
         activityTransferToYourBankBinding.seekTransToYourBank.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChangedValue = 0;
 
@@ -50,5 +50,6 @@ public class TransferToYourBankActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         activityTransferToYourBankBinding.seekTransToYourBank.setProgress(0);
+        activityTransferToYourBankBinding.txtSeek.setTextColor(getResources().getColor(R.color.black));
     }
 }

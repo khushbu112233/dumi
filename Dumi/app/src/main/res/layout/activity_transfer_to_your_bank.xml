@@ -249,6 +249,7 @@
                                 android:progressDrawable="@xml/progress_drawable"
                                 android:thumb="@drawable/ic_trans_bank2"/>
                             <TextView
+                                android:id="@+id/txtSeek"
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
