@@ -83,7 +83,7 @@
                             android:layout_height="47dp"
                             android:layout_gravity="center"
                             android:progressDrawable="@xml/progress_drawable"
-                            android:thumb="@drawable/ic_trans_to_bank"/>
+                            android:thumb="@drawable/ic_trans_bank2"/>
                         <TextView
                             android:id="@+id/txtSeek1"
                             android:layout_weight="1"
@@ -104,7 +104,8 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/round_blue"
+                        android:background="@drawable/round_trans_another_bank"
+
                         >
 
                     <com.ample.dumi.Utils.MySeekBar
@@ -137,7 +138,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/round_blue"
+                        android:background="@drawable/round_colorprimary"
                         >
 
                         <com.ample.dumi.Utils.MySeekBar
