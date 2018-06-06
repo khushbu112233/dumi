@@ -23,7 +23,7 @@
                 android:paddingLeft="40dp"
                 contentPaddingRight="20dp"
                 android:gravity="center_vertical"
-                android:background="@drawable/bg_trans_to_your_bank"
+                android:background="@drawable/transfer_to_your_bank_bg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.40"
@@ -201,17 +201,17 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
-                            <ImageView
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/blue_line"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-                            <com.ample.dumi.Utils.MySeekBar
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:maxHeight="2dip"
-                                android:minHeight="2dip"
-                                android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
+                                <ImageView
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/blue_line"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                                <com.ample.dumi.Utils.MySeekBar
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxHeight="2dip"
+                                    android:minHeight="2dip"
+                                    android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
                             </RelativeLayout>
                         </LinearLayout>
                     </ScrollView>
@@ -234,7 +234,9 @@
                             android:textColor="@color/light_blue"
                             android:textSize="15sp"/>
                         <FrameLayout
-                            android:layout_width="250dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
                             android:layout_height="50dp"
                             android:background="@drawable/round_blue"
                             >
