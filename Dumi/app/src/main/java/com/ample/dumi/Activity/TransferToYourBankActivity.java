@@ -50,5 +50,6 @@ public class TransferToYourBankActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         activityTransferToYourBankBinding.seekTransToYourBank.setProgress(0);
+
     }
 }

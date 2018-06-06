@@ -81,7 +81,7 @@
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_above="@+id/llTransfer"
+                        android:layout_above="@+id/rlAddPayee"
                         android:layout_alignParentTop="true"
                         >
                         <LinearLayout
@@ -101,7 +101,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/name_Account"
-                                        android:textColor="@color/light_blue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="13sp"/>
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                                         android:text="RP.2,300,000"
                                         android:visibility="gone"
                                         android:layout_marginLeft="10dp"
-                                        android:textColor="@color/darkBlue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="17sp"/>
                                 </LinearLayout>
 
@@ -137,7 +137,7 @@
                                 android:layout_height="1dp"
                                 android:layout_marginBottom="10dp"
                                 android:layout_marginTop="10dp"
-                                android:background="@color/light_blue"/>
+                                android:background="@color/colorPrimary"/>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -151,14 +151,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/amount"
-                                        android:textColor="@color/light_blue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="13sp"/>
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="RP.2,300,000"
                                         android:layout_marginLeft="30dp"
-                                        android:textColor="@color/darkBlue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="17sp"/>
                                 </LinearLayout>
 
@@ -188,7 +188,7 @@
                                     android:text="1"
                                     android:layout_gravity="left"
                                     android:gravity="left|center"
-                                    android:textColor="@color/light_blue"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="13sp"/>
                                 <TextView
                                     android:layout_width="0dp"
@@ -197,7 +197,7 @@
                                     android:text="50,000 RP"
                                     android:layout_gravity="right"
                                     android:gravity="right|center"
-                                    android:textColor="@color/light_blue"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="17sp"/>
                             </LinearLayout>
                             <com.ample.dumi.Utils.MySeekBar
@@ -221,7 +221,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/note"
-                                        android:textColor="@color/light_blue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="13sp"/>
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -229,7 +229,7 @@
                                         android:text=""
                                         android:visibility="gone"
                                         android:layout_marginLeft="10dp"
-                                        android:textColor="@color/darkBlue"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="17sp"/>
                                 </LinearLayout>
 
@@ -257,38 +257,31 @@
                                 android:layout_height="1dp"
                                 android:layout_marginBottom="10dp"
                                 android:layout_marginTop="10dp"
-                                android:background="@color/light_blue"/>
+                                android:background="@color/colorPrimary"/>
 
                         </LinearLayout>
                     </ScrollView>
-                    <LinearLayout
-                        android:layout_above="@+id/llTransfer"
+                    <RelativeLayout
+                        android:id="@+id/rlAddPayee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_above="@+id/llTransfer"
+                        android:layout_marginTop="10dp"
                         android:orientation="horizontal"
                         android:weightSum="1">
+
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="0.20"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:gravity="left|center"
-                            android:visibility="invisible"
-                            android:textSize="13sp"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="0.80"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/add_new_payee"
                             android:paddingBottom="10dp"
+                            android:layout_alignParentRight="true"
                             android:paddingTop="10dp"
                             android:layout_gravity="right"
                             android:gravity="right|center"
-                            android:textColor="@color/light_blue"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="15sp"/>
-                    </LinearLayout>
+                    </RelativeLayout>
                     <LinearLayout
                         android:id="@+id/llTransfer"
                         android:layout_width="match_parent"
@@ -299,7 +292,7 @@
                         <FrameLayout
                             android:layout_width="250dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/round_blue"
+                            android:background="@drawable/round_colorprimary"
                             >
                             <com.ample.dumi.Utils.MySeekBar
                                 android:id="@+id/seekbarTransDumi"
@@ -319,7 +312,7 @@
                                 android:text="@string/dummy_transfer"
                                 android:textSize="13sp"
                                 android:layout_gravity="center"
-                                android:textColor="@color/darkBlue"/>
+                                android:textColor="@color/colorPrimary"/>
                         </FrameLayout>
                     </LinearLayout>
                 </RelativeLayout>
