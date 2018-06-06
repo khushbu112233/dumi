@@ -13,7 +13,7 @@ import com.ample.dumi.R;
 import com.ample.dumi.databinding.ActivityTransferToYourBankBinding;
 
 public class TransferToYourBankActivity extends AppCompatActivity {
-ActivityTransferToYourBankBinding activityTransferToYourBankBinding;
+    ActivityTransferToYourBankBinding activityTransferToYourBankBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +46,11 @@ ActivityTransferToYourBankBinding activityTransferToYourBankBinding;
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        activityTransferToYourBankBinding.seekTransToYourBank.setProgress(0);
     }
 }

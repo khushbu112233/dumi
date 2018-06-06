@@ -85,6 +85,7 @@
                             android:progressDrawable="@xml/progress_drawable"
                             android:thumb="@drawable/ic_trans_to_bank"/>
                         <TextView
+                            android:id="@+id/txtSeek1"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -117,6 +118,7 @@
                         android:progressDrawable="@xml/progress_trans_another_bank"
                         android:thumb="@drawable/ic_trans_to_bank"/>
                         <TextView
+                            android:id="@+id/txtSeek2"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -149,6 +151,7 @@
                             android:progressDrawable="@xml/progress_colorprimary"
                             android:thumb="@drawable/ic_left_logo"/>
                         <TextView
+                            android:id="@+id/txtSeek3"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

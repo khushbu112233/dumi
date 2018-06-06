@@ -48,4 +48,10 @@ public class TransfertoAnotherBankActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        activityTransfertoAnotherBankBinding.seekTransToBank.setProgress(0);
+    }
 }

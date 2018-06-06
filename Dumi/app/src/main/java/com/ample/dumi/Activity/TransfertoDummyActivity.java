@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 
@@ -19,11 +20,9 @@ public class TransfertoDummyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityTransfertoDummyBinding = DataBindingUtil.setContentView(this,R.layout.activity_transferto_dummy);
-        View view = this.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        activityTransfertoDummyBinding.includeActionbar1.txtActionBarTitle.setText(getResources().getString(R.string.transfer));
+
         activityTransfertoDummyBinding.includeActionbar1.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +35,7 @@ public class TransfertoDummyActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+                activityTransfertoDummyBinding.txtSeek.setTextColor(getResources().getColor(R.color.white));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -47,5 +47,10 @@ public class TransfertoDummyActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        activityTransfertoDummyBinding.seekbarTransDumi.setProgress(0);
     }
 }
