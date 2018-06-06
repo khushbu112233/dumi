@@ -85,6 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:singleLine="true"
                 android:layout_above="@+id/edtNameAccount"
                 android:id="@+id/edtNIK"
                 android:textSize="15dp"
@@ -100,6 +101,7 @@
 
 
             <EditText
+                android:singleLine="true"
                 android:layout_above="@+id/btnAdd"
                 android:layout_marginTop="20dp"
                 android:inputType="textPassword"
