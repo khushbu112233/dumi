@@ -133,9 +133,8 @@
                         android:id="@+id/signature_pad"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        app:penColor="@android:color/black"
+                        app:penColor="@color/light_blue"
                         android:background="@drawable/blue_border"
-                        android:text="Signature"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -149,6 +148,8 @@
 
                 </FrameLayout>
                 <CheckBox
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/checkbox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/agreement_checkbox"

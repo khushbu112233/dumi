@@ -28,6 +28,7 @@
             android:background="@drawable/btn_shadow"/>
 
         <ImageView
+            android:src="@drawable/qk_logo"
             android:backgroundTint="@android:color/white"
             android:id="@+id/img"
             android:layout_marginRight="20dp"
@@ -107,7 +108,7 @@
                     android:layout_centerVertical="true"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_password_hint"/>
+                    android:src="@drawable/ic_pass_hint"/>
             </RelativeLayout>
 
             <TextView

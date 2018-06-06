@@ -168,7 +168,7 @@
                     android:layout_height="47dp"
                     android:layout_gravity="center"
                     android:progressDrawable="@xml/progress_colorprimary"
-                    android:thumb="@drawable/ic_left_logo1"/>
+                    android:thumb="@drawable/ic_left_logo"/>
                 <TextView
                     android:layout_weight="1"
                     android:layout_width="wrap_content"

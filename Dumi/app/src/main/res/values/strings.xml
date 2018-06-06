@@ -13,7 +13,7 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
     <string name="apply">Apply</string>
-    <string name="agreement_checkbox">Agreement T&amp;C(read details)</string>
+    <string name="agreement_checkbox">"    Agreement T&amp;C(read details)"</string>
     <string name="next">Next</string>
     <string name="transfer_to_your_bank">Transfer to your Bank</string>
     <string name="transfer_to_another_bank">Transfer to another Bank</string>

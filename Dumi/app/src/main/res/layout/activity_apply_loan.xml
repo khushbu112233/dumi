@@ -56,6 +56,7 @@
             </LinearLayout>
         </LinearLayout>
         <ScrollView
+            android:layout_above="@+id/lnrNext"
             android:layout_below="@+id/llTop"
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -87,7 +88,7 @@
                         android:textSize="35dp"/>
                     <View
                         android:layout_width="30dp"
-                        android:layout_height="5dp"
+                        android:layout_height="2dp"
                         android:background="@color/black"/>
                 </LinearLayout>
                 <LinearLayout
@@ -159,7 +160,7 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_close" />
+                                android:src="@drawable/ic_edit_sky_blue" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -188,14 +189,23 @@
                             android:textColor="@color/light_blue"
                             android:textSize="17sp"/>
                     </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/blue_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                     <com.ample.dumi.Utils.MySeekBar
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:maxHeight="2dip"
                         android:minHeight="2dip"
-                        android:background="@drawable/blue_line"
                         android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
-
+                    </RelativeLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -224,7 +234,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/loan_period"
-                                android:textColor="@color/light_blue"
+                                android:textColor="#2d59a6"
                                 android:textSize="13sp"/>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -244,7 +254,7 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_close" />
+                                android:src="@drawable/ic_edit_dark_blue" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -261,7 +271,7 @@
                             android:text="12"
                             android:layout_gravity="left"
                             android:gravity="left|center"
-                            android:textColor="@color/darkBlue"
+                            android:textColor="#2d59a6"
                             android:textSize="13sp"/>
                         <TextView
                             android:layout_width="0dp"
@@ -270,17 +280,29 @@
                             android:text="36 M"
                             android:layout_gravity="right"
                             android:gravity="right|center"
-                            android:textColor="@color/darkBlue"
+                            android:textColor="#2d59a6"
                             android:textSize="17sp"/>
                     </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:tint="#2d59a6"
+                            android:src="@drawable/blue_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
                     <com.ample.dumi.Utils.MySeekBar
+                        android:backgroundTint="#2d59a6"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:maxHeight="2dip"
                         android:minHeight="2dip"
-                        android:background="@drawable/blue_line"
-                        android:thumb="@xml/thumb_drawable"></com.ample.dumi.Utils.MySeekBar>
+                        android:thumb="@xml/thumb_dark_drawable"></com.ample.dumi.Utils.MySeekBar>
 
+
+                    </RelativeLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -292,6 +314,7 @@
             </LinearLayout>
         </ScrollView>
         <LinearLayout
+            android:id="@+id/lnrNext"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
