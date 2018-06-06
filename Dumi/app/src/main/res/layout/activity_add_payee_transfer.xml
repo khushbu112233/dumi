@@ -172,6 +172,7 @@
                 >
 
                 <com.ample.dumi.Utils.MySeekBar
+                    android:id="@+id/seekbarDumi"
                     android:layout_marginRight="-15dp"
                     android:layout_marginLeft="-15dp"
                     android:thumbOffset="0dp"
@@ -181,6 +182,7 @@
                     android:progressDrawable="@xml/progress_trans_another_bank"
                     android:thumb="@drawable/ic_trans_to_bank"/>
                 <TextView
+                    android:id="@+id/txtSeek"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

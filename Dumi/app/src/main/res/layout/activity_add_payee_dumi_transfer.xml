@@ -161,6 +161,7 @@
                 >
 
                 <com.ample.dumi.Utils.MySeekBar
+                    android:id="@+id/seekbarDumi"
                     android:layout_marginRight="-15dp"
                     android:layout_marginLeft="-15dp"
                     android:thumbOffset="0dp"
@@ -170,6 +171,7 @@
                     android:progressDrawable="@xml/progress_colorprimary"
                     android:thumb="@drawable/ic_left_logo"/>
                 <TextView
+                    android:id="@+id/txtSeek"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
