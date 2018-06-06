@@ -154,7 +154,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="RP.2,300,000"
                                         android:layout_marginLeft="30dp"
-                                        android:textColor="@color/darkBlue"
+                                        android:textColor="@color/black"
                                         android:textSize="17sp"/>
                                 </LinearLayout>
 

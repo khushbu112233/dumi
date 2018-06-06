@@ -122,7 +122,8 @@
                                     <ImageView
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@drawable/ic_close" />
+                                        android:tint="@color/colorPrimary"
+                                        android:src="@drawable/ic_name_of_acc" />
                                 </LinearLayout>
                             </LinearLayout>
                             <EditText
@@ -158,7 +159,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="RP.2,300,000"
                                         android:layout_marginLeft="30dp"
-                                        android:textColor="@color/colorPrimary"
+                                        android:textColor="@color/black"
                                         android:textSize="17sp"/>
                                 </LinearLayout>
 
@@ -171,7 +172,8 @@
                                     <ImageView
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@drawable/ic_close" />
+                                        android:tint="@color/colorPrimary"
+                                        android:src="@drawable/ic_edit_dark_blue" />
                                 </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
