@@ -166,11 +166,12 @@
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
             <Button
+                android:textAllCaps="false"
+                android:background="@drawable/ic_btn_bg"
                 android:id="@+id/btnApply"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_shadow"
                 android:layout_centerInParent="true"
                 android:layout_alignParentBottom="true"
                 android:padding="10dp"
