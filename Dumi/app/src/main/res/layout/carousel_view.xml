@@ -29,7 +29,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ProgressBar
                 android:id="@+id/progressBar1"
@@ -42,7 +42,7 @@
             <ImageView
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:scaleType="fitXY" />
         </RelativeLayout>
         <RelativeLayout
