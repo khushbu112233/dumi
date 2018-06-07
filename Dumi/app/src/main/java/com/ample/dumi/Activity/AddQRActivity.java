@@ -210,15 +210,7 @@ public class AddQRActivity extends AppCompatActivity implements ZXingScannerView
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //AlertDisplay();
 
-//        Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                mScannerView.resumeCameraPreview(QrActivity.this);
-//            }
-//        }, 2000);
     }
 
 
@@ -309,74 +301,13 @@ public class AddQRActivity extends AppCompatActivity implements ZXingScannerView
 
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.successful_request_sent), Toast.LENGTH_LONG).show();
                         Pref.setValue(AddQRActivity.this, "current_frag", "1");
-                      /*  fragment = new CardsFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment)
-                                .addToBackStack(null)
-                                .commit();
-                        DashboardActivity.activityDashboardBinding.includefooter.imgCard.setImageResource(R.drawable.ic_icon1b);
-                        DashboardActivity.activityDashboardBinding.includefooter.imgDashboard.setImageResource(R.drawable.ic_dashboard_gray);
-                        DashboardActivity.activityDashboardBinding.includefooter.imgProfile.setImageResource(R.drawable.ic_icon4);
-                        DashboardActivity.activityDashboardBinding.includefooter.tvCards.setTextColor(getResources().getColor(R.color.colorPrimary));
-                        DashboardActivity.activityDashboardBinding.includefooter.tvDashboard.setTextColor(getResources().getColor(R.color.unselected));
-                        DashboardActivity.activityDashboardBinding.includefooter.tvProfile.setTextColor(getResources().getColor(R.color.unselected));
-                        if (DashboardActivity.activityDashboardBinding.includefooter.txtNotificationCountAction.getText().toString().equals("0")){
-                            DashboardActivity.activityDashboardBinding.includefooter.txtNotificationCountAction.setVisibility(View.GONE);
-                            DashboardFragment.fragmentDashboardLayoutBinding.includeNotiRewardShare.txtNotificationCountAction1.setVisibility(View.GONE);
-                        }else {
-                            DashboardActivity.activityDashboardBinding.includefooter.txtNotificationCountAction.setVisibility(View.VISIBLE);
-                            DashboardFragment.fragmentDashboardLayoutBinding.includeNotiRewardShare.txtNotificationCountAction1.setVisibility(View.VISIBLE);
 
-                        }*/
                         finish();
                         Pref.setValue(AddQRActivity.this, "AddQr", "1");
-                        /*CardsFragment.mViewPager.getCurrentItem();
-                        List1Fragment.webCall();
-                        List2Fragment.webCall();
-                        List3Fragment.webCall();
-                        List4Fragment.webCall();*/
+
                     } else {
                         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                     }
-
-                 /*   try
-                    {
-//                    List2Fragment.allTaggs.clear();
-                        List2Fragment.nfcModel.clear();
-                        List2Fragment.gridAdapter.notifyDataSetChanged();
-                        List2Fragment.GetData(context);
-                    }
-                    catch(Exception e) {    }
-
-                    try
-                    {
-
-//                    List3Fragment.allTaggs.clear();
-                        List3Fragment.nfcModel1.clear();
-                        List3Fragment.gridAdapter.notifyDataSetChanged();
-                        List3Fragment.GetData(context);
-                    }
-                    catch(Exception e) {    }
-
-                    try
-                    {
-
-//                    List4Fragment.allTaggs.clear();
-                        List4Fragment.nfcModel1.clear();
-                        List4Fragment.gridAdapter.notifyDataSetChanged();
-                        List4Fragment.GetData(context);
-                    }
-                    catch(Exception e) {    }
-
-                    try
-                    {
-
-//                    List1Fragment.allTags.clear();
-                        List1Fragment.nfcModel.clear();
-                        List1Fragment.mAdapter.notifyDataSetChanged();
-                        List1Fragment.mAdapter1.notifyDataSetChanged();
-                        List1Fragment.GetData(context);
-                    }
-                    catch(Exception e) {    }*/
 
                 }
 
@@ -397,12 +328,6 @@ public class AddQRActivity extends AppCompatActivity implements ZXingScannerView
 //        CameraScreen();
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        mScannerView.setResultHandler(this);
-//        mScannerView.startCamera();
-//    }
 
 
     public void CameraScann()
