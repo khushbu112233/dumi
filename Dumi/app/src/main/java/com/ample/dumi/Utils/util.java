@@ -29,8 +29,6 @@ import javax.crypto.spec.SecretKeySpec;
 public class util {
     public static String secretKey = "1234567890234561";
     public static final byte[] MIME_TEXT = "application/com.circle8.circleOne".getBytes();
-    public static final String BASE_URL = "http://circle8.asia:8082/Onet.svc/";
-    public static final String BASE_IMAGE_URL = "http://circle8.asia:8082/";
 
     public static  void showAlert(final Context context,String str)
     {

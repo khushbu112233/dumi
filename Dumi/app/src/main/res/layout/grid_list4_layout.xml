@@ -47,6 +47,7 @@
                     android:orientation="vertical">
                     <com.ample.dumi.Fonts.NexaSlabBoldTextView
                         android:textStyle="bold"
+                        android:text="vfdvfvfbfdb"
                         android:textColor="@android:color/black"
                         android:gravity="left"
                         android:visibility="visible"
@@ -56,6 +57,7 @@
                         android:textSize="12sp" />
 
                     <com.ample.dumi.Fonts.NexaSlabRegularTextView
+                        android:text="fbfbfb "
                         android:textColor="@android:color/black"
                         android:gravity="left"
                         android:visibility="visible"
@@ -68,6 +70,7 @@
                 <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:ellipsize="end"
                     android:maxLines="5"
+                    android:text="fvfdvgfdbfbfdbfgngngngngngngngngngngngngngngngn"
                     android:layout_gravity="center_vertical|right"
                     android:gravity="left|center_vertical"
                     android:visibility="visible"

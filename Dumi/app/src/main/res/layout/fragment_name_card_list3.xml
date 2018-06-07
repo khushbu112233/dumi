@@ -54,6 +54,9 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <ListView
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
@@ -66,7 +69,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="fill"
-            android:layout_below="@+id/view"
             android:layout_above="@+id/rlLoadMore"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:id="@+id/rlLoadMore"
+                android:padding="3dp"
+                android:visibility="gone">
+                <ProgressBar
+                    android:id="@+id/more_progress"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/more_progress"
+                    android:padding="5dp"
+                    android:text="Loading more..."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
     </LinearLayout>
 </layout>

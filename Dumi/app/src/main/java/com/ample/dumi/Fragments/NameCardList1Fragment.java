@@ -25,6 +25,7 @@ import com.ample.dumi.Activity.AddQRActivity;
 import com.ample.dumi.Adapter.GalleryAdapter;
 import com.ample.dumi.Model.NameCard;
 import com.ample.dumi.R;
+import com.ample.dumi.Utils.Utility;
 import com.ample.dumi.Utils.util;
 import com.ample.dumi.databinding.FragmentNameCardList1Binding;
 import com.azoft.carousellayoutmanager.CarouselLayoutManager;
@@ -74,7 +75,7 @@ public class NameCardList1Fragment extends Fragment {
         allTags = new ArrayList<>();
 
 
-        new HttpAsyncTask().execute(util.BASE_URL+"GetFriendConnection");
+        new HttpAsyncTask().execute(Utility.BASE_URL+"GetFriendConnection");
         //mAdapter = new GalleryAdapter(getContext(), images);
 
         fragmentNameCardList1Binding.recyclerView.addOnScrollListener(new CenterScrollListener());

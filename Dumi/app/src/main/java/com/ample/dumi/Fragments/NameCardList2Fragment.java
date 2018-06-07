@@ -76,7 +76,7 @@ public class NameCardList2Fragment extends Fragment {
         allTaggs = new ArrayList<>();
         gridAdapter = new GridViewAdapter(getActivity(), R.layout.grid_list2_layout, allTaggs);
         fragmentNameCardList2Binding.gridList2.setAdapter(gridAdapter);
-        new HttpAsyncTask().execute(util.BASE_URL+"GetFriendConnection");
+        new HttpAsyncTask().execute(Utility.BASE_URL+"GetFriendConnection");
         //fragmentNameCardList2Binding.gridList2.setAdapter(new ImageAdapterGridView(getContext()));
         return view;
 
@@ -220,7 +220,7 @@ public class NameCardList2Fragment extends Fragment {
                                         // rlLoadMore.setVisibility(View.VISIBLE);
                                         // Execute LoadMoreDataTask AsyncTask
                                         // CallApi();
-                                        new HttpAsyncTask().execute(util.BASE_URL+"GetFriendConnection");
+                                        new HttpAsyncTask().execute(Utility.BASE_URL+"GetFriendConnection");
                                     }
                                 } else {
 

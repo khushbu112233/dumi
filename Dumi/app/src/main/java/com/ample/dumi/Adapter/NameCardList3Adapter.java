@@ -12,8 +12,12 @@ import android.widget.TextView;
 
 import com.ample.dumi.Model.NameCard;
 import com.ample.dumi.R;
+import com.ample.dumi.Utils.Utility;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -95,21 +99,18 @@ public class NameCardList3Adapter extends BaseAdapter{
             {
                 //holder.progressBar1.setVisibility(View.VISIBLE);
                 holder.image.setVisibility(View.VISIBLE);
-                holder.image.setImageResource(nameCardArrayList.get(position).getImage());
-               /* Picasso.with(context).load(Utility.BASE_IMAGE_URL+"UserProfile/"+nameCardArrayList.get(position).getUser_image())
-                        .resize(300,300).onlyScaleDown().into(holder.image);*/
+                //holder.image.setImageResource(nameCardArrayList.get(position).getImage());
 
-               /* final ViewHolder finalHolder = holder;
-                Glide.with(context).load(Utility.BASE_IMAGE_URL+"UserProfile/"+nameCardArrayList.get(position).getUser_image())
-                        .asBitmap()
-                        .into(new BitmapImageViewTarget(finalHolder.image) {
+                final ViewHolder finalHolder = holder;
+                Glide.with(context)
+                        .asBitmap().load(Utility.BASE_IMAGE_URL+"UserProfile/"+nameCardArrayList.get(position).getUser_image())
+                        .into(new SimpleTarget<Bitmap>() {
                             @Override
-                            public void onResourceReady(Bitmap drawable, GlideAnimation anim) {
-                                super.onResourceReady(drawable, anim);
+                            public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
                                 finalHolder.progressBar1.setVisibility(View.GONE);
-                                finalHolder.image.setImageBitmap(drawable);
+                                finalHolder.image.setImageBitmap(resource);
                             }
-                        });*/
+                        });
             }
         }
         catch (Exception e)
