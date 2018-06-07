@@ -47,14 +47,18 @@ import com.azoft.carousellayoutmanager.CenterScrollListener;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.google.zxing.qrcode.encoder.QRCode;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -68,6 +72,7 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 import static com.ample.dumi.Utils.Utility.POST2;
 import static com.ample.dumi.Utils.Utility.encrypt;
@@ -76,7 +81,6 @@ import static com.ample.dumi.Utils.util.secretKey;
 public class NameCardList1Fragment extends Fragment {
 
     FragmentNameCardList1Binding fragmentNameCardList1Binding;
-    private ArrayList<Integer> images;
     private GalleryAdapter mAdapter;
     View view;
     public static ArrayList<NameCard> allTags;
@@ -88,6 +92,9 @@ public class NameCardList1Fragment extends Fragment {
     LoginSession session;
 
     static String barName;
+    QRCodeWriter writer = new QRCodeWriter();
+
+
     public NameCardList1Fragment() {
         // Required empty public constructor
     }
@@ -101,7 +108,6 @@ public class NameCardList1Fragment extends Fragment {
                 inflater, R.layout.fragment_name_card_list1, container, false);
         view = fragmentNameCardList1Binding.getRoot();
 
-        images = new ArrayList<>();
         final CarouselLayoutManager layoutManager = new CarouselLayoutManager(CarouselLayoutManager.HORIZONTAL, false);
         layoutManager.setMaxVisibleItems(3);
         layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
@@ -111,13 +117,6 @@ public class NameCardList1Fragment extends Fragment {
 
         new HttpAsyncTask().execute(Utility.BASE_URL+"GetFriendConnection");
         fragmentNameCardList1Binding.recyclerView.addOnScrollListener(new CenterScrollListener());
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
-        images.add(R.drawable.loan_bal);
 
         fragmentNameCardList1Binding.lnrScanQr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,6 +126,13 @@ public class NameCardList1Fragment extends Fragment {
             }
         });
 
+        session = new LoginSession(getActivity());
+        HashMap<String, String> user = session.getUserDetails();
+        UserId = user.get(LoginSession.KEY_USERID);      // name
+        profileId = user.get(LoginSession.KEY_PROFILEID);
+        User_name = user.get(LoginSession.KEY_NAME);
+
+        getqrcode();
         fragmentNameCardList1Binding.lnrApplyQrCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -208,18 +214,6 @@ public class NameCardList1Fragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onViewCreated( View view,  Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        session = new LoginSession(getActivity());
-        HashMap<String, String> user = session.getUserDetails();
-        UserId = user.get(LoginSession.KEY_USERID);      // name
-        profileId = user.get(LoginSession.KEY_PROFILEID);
-        User_name = user.get(LoginSession.KEY_NAME);
-
-        getqrcode();
-    }
-
     private void getqrcode() {
 
 
@@ -244,55 +238,27 @@ public class NameCardList1Fragment extends Fragment {
         } catch (BadPaddingException e) {
             e.printStackTrace();
         }
+
+        BitMatrix bitMatrix = null;
         try {
-            //setting size of qr code
-            int width =600;
-            int height = 600;
-            int smallestDimension = width < height ? width : height;
-
-            String qrCodeData = barName;
-            //setting parameters for qr code
-            String charset = "UTF-8";
-            Map<EncodeHintType, ErrorCorrectionLevel> hintMap =new HashMap<EncodeHintType, ErrorCorrectionLevel>();
-            hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
-            CreateQRCode(qrCodeData, charset, hintMap, smallestDimension, smallestDimension);
-
-        } catch (Exception ex) {
-            Log.e("QrGenerate",ex.getMessage());
-        }
-
-    }
-    public  void CreateQRCode(String qrCodeData, String charset, Map hintMap, int qrCodeheight, int qrCodewidth)
-    {
-        try
-        {
-            //generating qr code in bitmatrix type
-            BitMatrix matrix = new MultiFormatWriter().encode(new String(qrCodeData.getBytes(charset), charset),
-                    BarcodeFormat.QR_CODE, qrCodewidth, qrCodeheight, hintMap);
-            //converting bitmatrix to bitmap
-
-            int width = matrix.getWidth();
-            int height = matrix.getHeight();
+            bitMatrix = writer.encode(barName, BarcodeFormat.QR_CODE, 600, 600);
+            int width = bitMatrix.getWidth();
+            int height = bitMatrix.getHeight();
             int[] pixels = new int[width * height];
-            // All are 0, or black, by default
             for (int y = 0; y < height; y++) {
                 int offset = y * width;
                 for (int x = 0; x < width; x++) {
-                    //pixels[offset + x] = matrix.get(x, y) ? BLACK : WHITE;
-                    pixels[offset + x] = matrix.get(x, y) ?
-                            ResourcesCompat.getColor(getResources(),R.color.colorPrimary,null) :WHITE;
+                    pixels[offset + x] = bitMatrix.get(x, y) ? BLACK : WHITE;
                 }
             }
 
             bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
             bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
-            //setting bitmap to image view
+            overlay = BitmapFactory.decodeResource(getResources(), R.drawable.ic_left_logo);
 
-            overlay = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logo);
-
-
-        }catch (Exception er){
-            Log.e("QrGenerate",er.getMessage());
+            //ivBarImage.setImageBitmap(bitmap);
+        } catch (WriterException e) {
+            e.printStackTrace();
         }
     }
 
