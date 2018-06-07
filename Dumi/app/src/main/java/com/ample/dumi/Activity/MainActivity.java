@@ -49,8 +49,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import static com.ample.dumi.Utils.Utility.decrypt;
 import static com.ample.dumi.Utils.util.MIME_TEXT;
-import static com.ample.dumi.Utils.util.decrypt;
 import static com.ample.dumi.Utils.util.secretKey;
 
 public class MainActivity extends AppCompatActivity implements PermissionUtils.PermissionResultCallback,

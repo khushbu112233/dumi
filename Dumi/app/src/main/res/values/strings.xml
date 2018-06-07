@@ -22,6 +22,7 @@
     <string name="transfer_to_dumi_user_nik">Dumi Transfer (NIK No.)</string>
     <string name="loan_history">Loan History</string>
     <string name="transfer">Transfer</string>
+    <string name="scan_qr_code">Scan QR code</string>
     <string name="apply_loan">Apply Loan</string>
     <string name="installment">Installment</string>
     <string name="signature">Signature</string>
