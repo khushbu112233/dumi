@@ -77,7 +77,21 @@ public class NameCardList3Adapter extends BaseAdapter{
         String designation = nameCardArrayList.get(position).getDesignation();
 
         holder.imageName.setText(name);
-        holder.imageDesc.setText(company+"\n"+email+"\n"+mobile+"\n"+website);
+        String desc = "";
+
+        if (!company.trim().equalsIgnoreCase("")){
+            desc += company;
+        }
+        if (!email.trim().equalsIgnoreCase("")){
+            desc += "\n"+email;
+        }
+        if (!mobile.trim().equalsIgnoreCase("")){
+            desc += "\n"+mobile;
+        }
+        if (!website.trim().equalsIgnoreCase("")){
+            desc += "\n"+website;
+        }
+        holder.imageDesc.setText(desc);
         try
         {
             if (!designation.equalsIgnoreCase(""))

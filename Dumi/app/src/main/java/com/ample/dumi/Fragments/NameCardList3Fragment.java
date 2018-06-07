@@ -55,7 +55,7 @@ public class NameCardList3Fragment extends Fragment {
                 inflater, R.layout.fragment_name_card_list3, container, false);
         view = fragmentNameCardList3Binding.getRoot();
         allTaggs = new ArrayList<>();
-
+        pageno = 1;
         gridAdapter = new NameCardList3Adapter(getActivity(), R.layout.grid_list4_layout, allTaggs);
         fragmentNameCardList3Binding.list3.setAdapter(gridAdapter);
         new HttpAsyncTask().execute(Utility.BASE_URL+"GetFriendConnection");

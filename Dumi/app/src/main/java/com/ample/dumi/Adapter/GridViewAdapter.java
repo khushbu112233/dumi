@@ -231,15 +231,15 @@ public class GridViewAdapter extends BaseSwipeAdapter
                     holder.imgDefault.setColorFilter(context.getResources().getColor(R.color.white));
                     holder.v1.setBackgroundColor(context.getResources().getColor(R.color.white));
                 } else {
-                    holder.rldfl.setBackgroundColor(context.getResources().getColor(R.color.black));
-                    holder.tvPersonWebsite.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.tvPersonProfile.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.tvPersonAddress.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.tvPersonContact.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.imgDefault.setColorFilter(context.getResources().getColor(R.color.black));
-                    holder.tvPersonName.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.tvPersonNameLast.setTextColor(context.getResources().getColor(R.color.black));
-                    holder.v1.setBackgroundColor(context.getResources().getColor(R.color.black));
+                    holder.rldfl.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
+                    holder.tvPersonWebsite.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.tvPersonProfile.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.tvPersonAddress.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.tvPersonContact.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.imgDefault.setColorFilter(context.getResources().getColor(R.color.white));
+                    holder.tvPersonName.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.tvPersonNameLast.setTextColor(context.getResources().getColor(R.color.white));
+                    holder.v1.setBackgroundColor(context.getResources().getColor(R.color.white));
                 }
             }else
             {
