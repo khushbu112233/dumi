@@ -19,7 +19,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+
 import com.ample.dumi.Activity.MainActivity;
+import com.ample.dumi.Activity.AddQRActivity;
 import com.ample.dumi.Adapter.GalleryAdapter;
 import com.ample.dumi.Model.NameCard;
 import com.ample.dumi.R;
@@ -37,6 +39,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import static com.ample.dumi.Utils.Utility.POST2;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -46,6 +50,7 @@ public class NameCardList1Fragment extends Fragment {
     private ArrayList<Integer> images;
     private GalleryAdapter mAdapter;
     View view;
+    public static ArrayList<NameCard> allTags;
 
     public NameCardList1Fragment() {
         // Required empty public constructor
@@ -66,14 +71,11 @@ public class NameCardList1Fragment extends Fragment {
         layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
         fragmentNameCardList1Binding.recyclerView.setLayoutManager(layoutManager);
         fragmentNameCardList1Binding.recyclerView.setHasFixedSize(true);
-
+        allTags = new ArrayList<>();
 
 
         new HttpAsyncTask().execute(util.BASE_URL+"GetFriendConnection");
-        mAdapter = new GalleryAdapter(getContext(), images);
-
-
-        fragmentNameCardList1Binding.recyclerView.setAdapter(mAdapter);
+        //mAdapter = new GalleryAdapter(getContext(), images);
 
         fragmentNameCardList1Binding.recyclerView.addOnScrollListener(new CenterScrollListener());
         images.add(R.drawable.loan_bal);
@@ -83,6 +85,14 @@ public class NameCardList1Fragment extends Fragment {
         images.add(R.drawable.loan_bal);
         images.add(R.drawable.loan_bal);
         images.add(R.drawable.loan_bal);
+
+        fragmentNameCardList1Binding.lnrScanQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddQRActivity.class);
+                startActivity(intent);
+            }
+        });
 
         fragmentNameCardList1Binding.lnrTapCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,7 +169,7 @@ public class NameCardList1Fragment extends Fragment {
                     jsonObject.accumulate("numofrecords", "1000");
 //            jsonObject.accumulate("pageno", pageno);
                     jsonObject.accumulate("pageno", "1");
-                    jsonObject.accumulate("userid", "1");
+                    jsonObject.accumulate("userid", "5");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -184,34 +194,12 @@ public class NameCardList1Fragment extends Fragment {
                     JSONObject jsonObject = new JSONObject(result);
 
                     //Toast.makeText(getContext(), jsonArray.toString(), Toast.LENGTH_LONG).show();
-                    count = jsonObject.getString("count");
-
-                    if (count.equals("") || count.equals("null"))
-                    {
-                        numberCount = 0;
-                    }
-                    else
-                    {
-                        numberCount = Integer.parseInt(count);
-                    }
-
 //                    nfcModel.clear();
                     allTags.clear();
-                    try
-                    {
-                        mAdapter.notifyDataSetChanged();
-                        mAdapter1.notifyDataSetChanged();
-                    }
-                    catch (Exception e) {
-                        e.printStackTrace();
-                    }
+
                     JSONArray jsonArray;
 
                         jsonArray = jsonObject.getJSONArray("connection");
-                    number_cards = jsonArray.length();
-                    fragmentList1Binding.includeCarousel1.rlLoadMore1.setVisibility(View.GONE);
-                    fragmentList1Binding.includeCarousel2.rlLoadMore2.setVisibility(View.GONE);
-
                     for (int i = 0; i < jsonArray.length(); i++)
                     {
                         JSONObject object = jsonArray.getJSONObject(i);
@@ -228,15 +216,17 @@ public class NameCardList1Fragment extends Fragment {
                         nfcModelTag.setCard_back(object.getString("Card_Back"));
                         nfcModelTag.setUser_image(object.getString("UserPhoto"));
                         nfcModelTag.setProfile_id(object.getString("ProfileId"));
-                        nfcModelTag.setDateInitiated(object.getString("DateInitiated"));
+                        //nfcModelTag.setDateInitiated(object.getString("DateInitiated"));
                         nfcModelTag.setAddress(object.getString("Address1") + " " + object.getString("Address2")
                                 + " " + object.getString("Address3") + " " + object.getString("Address4"));
 //                        Toast.makeText(getActivity(),"Profile_id"+object.getString("ProfileId"),Toast.LENGTH_SHORT).show();
-                        nfcModelTag.setLatitude(object.getString("Latitude"));
-                        nfcModelTag.setLongitude(object.getString("Longitude"));
+                      //  nfcModelTag.setLatitude(object.getString("Latitude"));
+                      //  nfcModelTag.setLongitude(object.getString("Longitude"));
                         allTags.add(nfcModelTag);
 
                     }
+                    mAdapter = new GalleryAdapter(getContext(), allTags);
+                    fragmentNameCardList1Binding.recyclerView.setAdapter(mAdapter);
 
                 }
                 else

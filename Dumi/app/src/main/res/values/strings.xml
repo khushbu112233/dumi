@@ -40,4 +40,7 @@
     <string name="Email_empty">Email is required!</string>
     <string name="net_check">check for data connection</string>
 
+    <string name="successful_request_sent">Contact has been successfully added to your cards \n A request has been sent to connect</string>
+
+
 </resources>
