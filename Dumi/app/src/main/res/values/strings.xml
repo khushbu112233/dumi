@@ -38,5 +38,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_loan_history">LoanHistoryActivity</string>
     <string name="Email_empty">Email is required!</string>
+    <string name="net_check">check for data connection</string>
 
 </resources>
