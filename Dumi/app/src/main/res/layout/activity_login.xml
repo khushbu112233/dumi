@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <com.ample.dumi.Fonts.NexaSlabBoldButton
             android:textAllCaps="false"
             android:id="@+id/btnRegister"
             android:layout_marginLeft="20dp"
@@ -43,7 +43,7 @@
             android:textColor="@android:color/white"
             android:background="@drawable/btn_shadow"/>
 
-        <Button
+        <com.ample.dumi.Fonts.NexaSlabBoldButton
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
+            <com.ample.dumi.Fonts.NexaSlabBoldEditText
                 android:singleLine="true"
                 android:id="@+id/edtNIK"
                 android:textSize="15dp"
@@ -88,7 +88,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <EditText
+            <com.ample.dumi.Fonts.NexaSlabBoldEditText
                 android:singleLine="true"
                 android:inputType="textPassword"
                 android:id="@+id/edtPassword"
@@ -111,7 +111,7 @@
                     android:src="@drawable/ic_pass_hint"/>
             </RelativeLayout>
 
-            <TextView
+            <com.ample.dumi.Fonts.NexaSlabRegularTextView
                 android:id="@+id/txtForgotPassword"
                 android:layout_marginTop="5dp"
                 android:textSize="13dp"

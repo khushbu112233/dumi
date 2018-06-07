@@ -22,7 +22,7 @@
             android:layout_height="45dp"
             android:src="@drawable/ic_left_back"/>
 
-        <TextView
+        <com.ample.dumi.Fonts.NexaSlabRegularTextView
             android:id="@+id/txtActionBarTitle"
             android:textColor="@android:color/black"
             android:textSize="20dp"
@@ -63,7 +63,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <com.ample.dumi.Fonts.NexaSlabBoldTextView
             android:layout_marginLeft="20dp"
             android:layout_weight="0"
             android:textStyle="bold"
@@ -84,7 +84,7 @@
             android:layout_marginTop="0dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <EditText
+            <com.ample.dumi.Fonts.NexaSlabBoldEditText
                 android:singleLine="true"
                 android:layout_above="@+id/edtNameAccount"
                 android:id="@+id/edtNIK"
@@ -100,7 +100,7 @@
 
 
 
-            <EditText
+            <com.ample.dumi.Fonts.NexaSlabBoldEditText
                 android:singleLine="true"
                 android:layout_above="@+id/btnAdd"
                 android:layout_marginTop="20dp"
@@ -117,7 +117,7 @@
                 android:background="@drawable/white_edittext_shadow"/>
 
 
-            <Button
+            <com.ample.dumi.Fonts.NexaSlabBoldButton
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="30dp"
                 android:textStyle="bold"
@@ -145,7 +145,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <com.ample.dumi.Fonts.NexaSlabBoldTextView
             android:layout_marginBottom="20dp"
             android:layout_gravity="right"
             android:textColor="@color/colorPrimary"
@@ -170,7 +170,7 @@
                     android:layout_gravity="center"
                     android:progressDrawable="@xml/progress_colorprimary"
                     android:thumb="@drawable/ic_left_logo"/>
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:id="@+id/txtSeek"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"

@@ -31,7 +31,7 @@
                     android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
                     android:src="@drawable/ic_left_back" />
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/apply_loan"
@@ -58,7 +58,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/llTop">
+            android:layout_below="@+id/llTop"
+            android:layout_above="@+id/llBottom">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,49 +72,45 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/installment"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="35dp"/>
-                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="40dp"/>
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-10dp"
                         android:text="@string/amount"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="35dp"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="40dp"/>
                     <View
                         android:layout_width="30dp"
-                        android:layout_height="5dp"
+                        android:layout_height="2dp"
                         android:background="@color/black"/>
                 </LinearLayout>
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabBoldTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rp.1,620,000"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="21dp"
-                        android:textStyle="bold" />
-
-                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp"/>
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/month"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="25dp" />
-
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -147,7 +144,7 @@
                         android:textSize="35sp"/>
 
                 </FrameLayout>
-                <CheckBox
+                <com.ample.dumi.Fonts.NexaSlabBoldCheckBox
                     android:layout_marginLeft="10dp"
                     android:button="@drawable/checkbox"
                     android:layout_width="match_parent"
@@ -155,17 +152,19 @@
                     android:text="@string/agreement_checkbox"
                     android:textSize="11sp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textStyle="bold"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/darkBlue" />
+                    android:textColor="@color/colorPrimary" />
             </LinearLayout>
         </ScrollView>
         <LinearLayout
+            android:id="@+id/llBottom"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
-            <Button
+            <com.ample.dumi.Fonts.NexaSlabBoldButton
                 android:textAllCaps="false"
                 android:background="@drawable/ic_btn_bg"
                 android:id="@+id/btnApply"

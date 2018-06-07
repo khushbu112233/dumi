@@ -24,13 +24,13 @@
                 android:layout_weight="2"
                 android:orientation="vertical">
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:gravity="bottom"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Balance"
-                    android:textSize="35dp"
+                    android:textSize="40dp"
                     android:textColor="@color/white"/>
 
                 <ImageView
@@ -40,12 +40,13 @@
                     android:layout_height="2dp"
                     android:background="@color/white"></ImageView>
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rp. 350,000,000"
-                    android:textSize="30dp"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
@@ -60,27 +61,29 @@
                 android:layout_weight="0.5"
                 android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:id="@+id/lnrTransfer"
-                        android:gravity="center"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                <LinearLayout
+                    android:id="@+id/lnrTransfer"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_transfer"/>
+
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                           <ImageView
-                                android:layout_gravity="center"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:src="@drawable/ic_transfer"/>
-
-                        <TextView
-                            android:layout_marginTop="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Transfer"
-                            android:textColor="@android:color/black"/>
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:text="Transfer"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
                 <LinearLayout
                     android:id="@+id/lnrPPOB"
                     android:gravity="center"
@@ -95,11 +98,13 @@
                         android:layout_height="60dp"
                         android:src="@drawable/ic_ppob"/>
 
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PPOB"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
                         android:textColor="@android:color/black"/>
                 </LinearLayout>
                 <LinearLayout
@@ -116,11 +121,13 @@
                         android:layout_height="60dp"
                         android:src="@drawable/ic_history"/>
 
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="History"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
                         android:textColor="@android:color/black"/>
                 </LinearLayout>
 
@@ -139,11 +146,13 @@
                     android:layout_height="50dp"
                     android:src="@drawable/ic_loan"/>
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Apply Loan"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
                     android:textColor="@android:color/black"/>
 
 

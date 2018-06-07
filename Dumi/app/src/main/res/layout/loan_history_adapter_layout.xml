@@ -18,17 +18,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Angsuran 1"
-                    android:textColor="@color/darkBlue"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="13sp"/>
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="11 Nov 2018"
-                    android:textColor="@color/darkBlue"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="13sp"/>
             </LinearLayout>
             <LinearLayout
@@ -43,26 +43,26 @@
                     android:orientation="horizontal"
                     android:weightSum="1"
                     >
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.25"
                         android:layout_height="wrap_content"
                         android:text="Bayar"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.05"
                         android:layout_height="wrap_content"
                         android:text=":"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.70"
                         android:layout_height="wrap_content"
                         android:text="RP. 1,200,000"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -71,26 +71,26 @@
                     android:orientation="horizontal"
                     android:weightSum="1"
                     >
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.25"
                         android:layout_height="wrap_content"
                         android:text="Sisa"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.05"
                         android:layout_height="wrap_content"
                         android:text=":"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="0dp"
                         android:layout_weight="0.70"
                         android:layout_height="wrap_content"
                         android:text="RP. 0"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="13sp"/>
                 </LinearLayout>
             </LinearLayout>

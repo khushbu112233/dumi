@@ -23,19 +23,19 @@
                 android:paddingLeft="40dp"
                 contentPaddingRight="20dp"
                 android:gravity="center_vertical"
-                android:background="@drawable/transfer_bg"
+                android:background="@drawable/loan_history_bg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.40"
                 android:orientation="vertical">
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:gravity="bottom"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Balance"
-                    android:textSize="35dp"
+                    android:textSize="40dp"
                     android:textColor="@color/white"/>
 
                 <ImageView
@@ -45,12 +45,12 @@
                     android:layout_height="2dp"
                     android:background="@color/white"></ImageView>
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabBoldTextView
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rp. 350,000,000"
-                    android:textSize="30dp"
+                    android:textSize="35dp"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
@@ -84,7 +84,7 @@
                             android:layout_gravity="center"
                             android:progressDrawable="@xml/progress_drawable"
                             android:thumb="@drawable/ic_trans_bank2"/>
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabRegularTextView
                             android:id="@+id/txtSeek1"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
                             android:text="@string/transfer_to_your_bank"
                             android:textSize="13sp"
                             android:layout_gravity="center"
-                            android:textColor="@color/darkBlue"/>
+                            android:textColor="@color/colorPrimary"/>
                     </FrameLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -118,7 +118,7 @@
                         android:layout_gravity="center"
                         android:progressDrawable="@xml/progress_trans_another_bank"
                         android:thumb="@drawable/ic_trans_to_bank"/>
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabRegularTextView
                             android:id="@+id/txtSeek2"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                             android:text="@string/transfer_to_another_bank"
                             android:textSize="13sp"
                             android:layout_gravity="center"
-                            android:textColor="@color/darkBlue"/>
+                            android:textColor="@color/colorPrimary"/>
                     </FrameLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -151,15 +151,16 @@
                             android:layout_gravity="center"
                             android:progressDrawable="@xml/progress_colorprimary"
                             android:thumb="@drawable/ic_left_logo"/>
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabRegularTextView
                             android:id="@+id/txtSeek3"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="@string/transfer_to_dumi_user"
                             android:textSize="13sp"
                             android:layout_gravity="center"
-                            android:textColor="@color/darkBlue"/>
+                            android:textColor="@color/colorPrimary"/>
                     </FrameLayout>
                 </LinearLayout>
             </LinearLayout>

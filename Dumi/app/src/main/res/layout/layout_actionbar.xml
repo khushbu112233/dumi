@@ -16,7 +16,7 @@
             android:layout_height="45dp"
             android:src="@drawable/ic_left_logo"/>
 
-        <TextView
+        <com.ample.dumi.Fonts.NexaSlabRegularTextView
             android:id="@+id/txtActionBarTitle"
             android:textColor="@android:color/black"
             android:textSize="20dp"

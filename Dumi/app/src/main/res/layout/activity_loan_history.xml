@@ -30,13 +30,13 @@
                 android:layout_weight="0.40"
                 android:orientation="vertical">
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:gravity="bottom"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Balance"
-                    android:textSize="35dp"
+                    android:textSize="40dp"
                     android:textColor="@color/white"/>
 
                 <ImageView
@@ -46,12 +46,12 @@
                     android:layout_height="2dp"
                     android:background="@color/white"></ImageView>
 
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabBoldTextView
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rp. 350,000,000"
-                    android:textSize="30dp"
+                    android:textSize="35dp"
                     android:textColor="@color/white"/>
 
             </LinearLayout>

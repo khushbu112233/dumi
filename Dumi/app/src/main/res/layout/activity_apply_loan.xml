@@ -31,7 +31,7 @@
                     android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
                     android:src="@drawable/ic_left_back" />
-                <TextView
+                <com.ample.dumi.Fonts.NexaSlabRegularTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/apply_loan"
@@ -73,19 +73,19 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/installment"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="35dp"/>
-                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="40dp"/>
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-10dp"
                         android:text="@string/amount"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="35dp"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="40dp"/>
                     <View
                         android:layout_width="30dp"
                         android:layout_height="2dp"
@@ -99,19 +99,19 @@
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.ample.dumi.Fonts.NexaSlabBoldTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rp.1,620,000"
-                        android:textColor="@color/darkBlue"
+                        android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
-                        android:textSize="21dp"/>
-                    <TextView
+                        android:textSize="25dp"/>
+                    <com.ample.dumi.Fonts.NexaSlabRegularTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/month"
-                        android:textColor="@color/darkBlue"
-                        android:textSize="21dp"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -136,18 +136,18 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.80">
-                            <TextView
+                            <com.ample.dumi.Fonts.NexaSlabBoldTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/loan_amount"
                                 android:textColor="@color/light_blue"
                                 android:textSize="13sp"/>
-                            <TextView
+                            <com.ample.dumi.Fonts.NexaSlabRegularTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="RP.2,300,000"
                                 android:layout_marginLeft="10dp"
-                                android:textColor="@color/darkBlue"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="17sp"/>
                         </LinearLayout>
 
@@ -170,7 +170,7 @@
                         android:layout_marginBottom="5dp"
                         android:orientation="horizontal"
                         android:weightSum="1">
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabBoldTextView
                             android:layout_width="0dp"
                             android:layout_weight="0.50"
                             android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
                             android:gravity="left|center"
                             android:textColor="@color/light_blue"
                             android:textSize="13sp"/>
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabBoldTextView
                             android:layout_width="0dp"
                             android:layout_weight="0.50"
                             android:layout_height="wrap_content"
@@ -230,18 +230,18 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.80">
-                            <TextView
+                            <com.ample.dumi.Fonts.NexaSlabBoldTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/loan_period"
                                 android:textColor="#2d59a6"
                                 android:textSize="13sp"/>
-                            <TextView
+                            <com.ample.dumi.Fonts.NexaSlabRegularTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="36 months"
                                 android:layout_marginLeft="10dp"
-                                android:textColor="@color/darkBlue"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="17sp"/>
                         </LinearLayout>
 
@@ -264,7 +264,7 @@
                         android:layout_marginBottom="5dp"
                         android:orientation="horizontal"
                         android:weightSum="1">
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabBoldTextView
                             android:layout_width="0dp"
                             android:layout_weight="0.50"
                             android:layout_height="wrap_content"
@@ -273,7 +273,7 @@
                             android:gravity="left|center"
                             android:textColor="#2d59a6"
                             android:textSize="13sp"/>
-                        <TextView
+                        <com.ample.dumi.Fonts.NexaSlabBoldTextView
                             android:layout_width="0dp"
                             android:layout_weight="0.50"
                             android:layout_height="wrap_content"
@@ -321,7 +321,7 @@
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
 
-            <Button
+            <com.ample.dumi.Fonts.NexaSlabBoldButton
                 android:textAllCaps="false"
                 android:id="@+id/btnLogin"
                 android:layout_width="80dp"
