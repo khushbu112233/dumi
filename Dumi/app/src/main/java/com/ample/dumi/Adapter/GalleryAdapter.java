@@ -253,7 +253,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.MyViewHo
         defaultCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Utility.CustomProgressDialog("Loading",mContext);
+                //Utility.CustomProgressDialog("Loading",mContext);
 
                 /*CardDetail.profile_id = nfcModelList.get(position).getProfile_id();
                 CardDetail.DateInitiated = nfcModelList.get(position).getDateInitiated();
