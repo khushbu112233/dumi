@@ -1,6 +1,7 @@
 package com.ample.dumi.Fragments;
 
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -59,6 +60,14 @@ public class NameCardList1Fragment extends Fragment {
         images.add(R.drawable.loan_bal);
         images.add(R.drawable.loan_bal);
         images.add(R.drawable.loan_bal);
+
+        fragmentNameCardList1Binding.lnrScanQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddQRActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
